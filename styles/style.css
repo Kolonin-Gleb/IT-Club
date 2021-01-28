@@ -2,4 +2,17 @@ body {
     font-size: 24px; /*Default fonts for site*/
     font-family: 'Times New Roman', Arial;
 }
-
+.titleText {
+    font-size: 200px;
+    text-align: center;
+    
+   text-transform: uppercase;
+    background:  linear-gradient(90deg, rgba(22,163,226,1) 0%, rgba(152,34,255,1) 100%);
+    
+        
+   font-family: 'Montserrat', sans-serif;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+  }
