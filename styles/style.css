@@ -15,5 +15,10 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     
-  }
+}
+
+.imgHello {
+    text-align: center;
+    
+}
 
