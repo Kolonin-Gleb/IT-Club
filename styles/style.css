@@ -16,4 +16,13 @@ body {
     -webkit-text-fill-color: transparent;
     
   }
+.events {
+    height: 100vh;
 
+    display: flex;
+
+}
+
+.blocks {
+    background-color: darkorange;
+}
