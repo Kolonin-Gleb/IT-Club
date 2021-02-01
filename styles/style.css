@@ -10,16 +10,18 @@ body {
 }
 
 .ITCLubTitle {
+    font-size: 150px;
+    font-family: 'Montserrat';
     color: white;
-    font-size: 90px;
-    /*Первое значение задает поле от верхнего края, второе — одновременно от левого и правого края, а третье — от нижнего края.*/
-    padding: 10px 150px 10px;
+    /*сверху справа снизу слева*/
+    padding: 10px 10px 10px 100px;
 }
 
 p.text {
-    color: white;
     font-size: 60px;
-    padding: 10px 300px 10px;
+    font-family: 'Montserrat';
+    color: white;
+    padding: 10px 150px 10px 600px;
     margin: 0px;
 }
 
