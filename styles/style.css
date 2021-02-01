@@ -2,6 +2,7 @@ body {
     font-size: 24px; /*Default fonts for site*/
     font-family: 'Times New Roman', Arial;
     background-color: white;
+    margin: 0;
 }
 .titleText {
     font-size: 200px;
@@ -15,25 +16,98 @@ body {
     
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    height: 100vh;
     
   }
 footer{
   background-color: black;
   color: white;
   width: 100%;
-  height: 500px;
+  height: 800px;
   display: flex;
-  justify-content: space-between;
-
+  justify-content: space-evenly;
+  flex-direction: row; /* горизонтальное напровление */
+  font-weight: bold;
+  font-size: 24px;
 } 
 
-.one{
-    
+.one > p{
+  font-weight: bold;
+  font-size: 90px;
+}
+
+.one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 100%;
+  padding: 140px 0;
+}
+
+.one p {
+  margin: 0;
+}
+
+.two {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 100%;
+  padding: 10% 0;
 }
 
 form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+input{
+  background: none;
+  font-weight: bold;
+  font-size: 24px;
+  width: 600px;
+  color: rgb(218, 218, 218);
+  border: 0 solid #fff;
+  border-bottom: 1px solid #fff;
+  font-family: 'Times New Roman', Arial;
+}
+
+textarea{
+  background: none;
+  font-weight: bold;
+  font-size: 24px;
+  color: rgb(218, 218, 218);
+  width: 600px;
+  border: 0 solid #fff;
+  border-bottom: 1px solid #fff;
+  font-family: 'Times New Roman', Arial;
+}
+
+button{
+  background: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  width: 400px;
+  border-radius: 8px;
+  padding: 12px 15px;
+  align-items: center;
+  font-family: 'Times New Roman', Arial;
+}
+
+.icons{
+  display: flex;
+  height: 100px;
+  margin-top: 20px;
+}
+
+.icons > div {
+  width: 100px;
+  height: 100%;
+  background-color: blueviolet;
+  border-radius: 100%;
+  margin-right: 4px;
 }
