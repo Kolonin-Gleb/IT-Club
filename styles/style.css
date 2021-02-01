@@ -36,38 +36,41 @@ body {
     /* background-color: darkorange; */
 }
 
-.left {
+.sideBlock {
     width: 25%;
     height: inherit;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-between;
     
     /* background-color: darkorchid; */
 }
 
-.left > div {
+.sideBlock > div {
     height: calc(80%/3);
 
     background-color: greenyellow;
 }
 
-.right {
+.sideBlock > div:first-child {
+    background-color: aqua;
+}
+
+.sideBlock > div:last-child {
+    background-color: blueviolet;
+}
+
+.mainBlock {
     width: 70%;
     height: inherit;
     
-    /* background-color: darkseagreen; */
+    background-color: darkseagreen;
 
     position: relative;
 }
 
-.right > img {
-    height: inherit;
-    width: 100%;
-}
-
-.right > div {
+.mainBlock > div {
     height: 15%;
     width: 100%;
 
@@ -82,6 +85,6 @@ body {
     display: flex;
     align-items: flex-end;
 }
-.right > div > p {
+.mainBlock > div > p {
     margin: 0;
 }
