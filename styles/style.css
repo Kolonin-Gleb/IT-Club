@@ -1,18 +1,7 @@
 body {
     font-size: 24px; /*Default fonts for site*/
     font-family: 'Times New Roman', Arial;
-}
-.titleText {
-    font-size: 200px;
-    text-align: center;
-    
-    text-transform: uppercase;
-    background:  linear-gradient(90deg, rgba(22,163,226,1) 0%, rgba(152,34,255,1) 100%);
-    
-    font-family: 'Montserrat', sans-serif;
-
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-color: #FCBA7E;
 }
 
 .imgHello {
@@ -20,8 +9,17 @@ body {
     margin: 0px 20px 20px 20px;
 }
 
-.ITCLubText {
-    font-size: 70px;
-    text-align: left;
+.ITCLubTitle {
+    color: white;
+    font-size: 90px;
+    /*Первое значение задает поле от верхнего края, второе — одновременно от левого и правого края, а третье — от нижнего края.*/
+    padding: 10px 150px 10px;
+}
+
+p.text {
+    color: white;
+    font-size: 60px;
+    padding: 10px 300px 10px;
+    margin: 0px;
 }
 
