@@ -32,8 +32,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    /* background-color: darkorange; */
 }
 
 .sideBlock {
@@ -43,31 +41,15 @@ body {
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
-    
-    /* background-color: darkorchid; */
 }
 
 .sideBlock > div {
-    /* height: calc(80%/3); */
+    height: calc(80%/3);
 
     display: flex;
     align-items: flex-end;
 
     padding: 0px 20px ;
-
-    background-color: greenyellow;
-}
-
-/* .sideBlock > div > span {
-    background-color: #3d3d3d6c;
-} */
-
-.sideBlock > div:first-child {
-    background-color: aqua;
-}
-
-.sideBlock > div:last-child {
-    background-color: rgb(43, 220, 226);
 }
 
 .mainBlock {
@@ -82,8 +64,6 @@ body {
 .mainBlock > div {
     height: 15%;
     width: 100%;
-
-    /* background-color: rgba(128, 128, 128, 0.5); */
 
     z-index: 1;
     position: absolute;

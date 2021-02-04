@@ -1,18 +1,23 @@
 class EventsSideBlock {
+    element = document.createElement("div");
     title;
     background;
     text;
 
-    template = document.createElement("div");
-
-    constructor(title, background, text, daddy) {
-        this.title      = title;
-        this.background = background;
-        this.text       = text;
-
-        let span = Object.assign(document.createElement("span"), {innerHTML: title});
-        this.template.appendChild(span);
-
-        daddy.appendChild(this.template);
+    set["bg"](v) {
+        this.background = v;
+        this.element.style.background = v;
     }
+
+    constructor({title, background, text, daddy}) {
+        this.title = title;
+        this.text  = text;
+        this.bg = background;
+        
+        let span = Object.assign(document.createElement("span"), {innerHTML: title});
+        this.element.appendChild(span);
+
+        daddy.appendChild(this.element);
+    }
+
 }
