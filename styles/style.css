@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+  font-family: 'Roboto', sans-serif;
+}
 body {
     font-size: 24px; /*Default fonts for site*/
-    font-family: 'Times New Roman', Arial;
     background-color: white;
     margin: 0;
 }
@@ -72,7 +75,6 @@ input{
   color: rgb(218, 218, 218);
   border: 0 solid #fff;
   border-bottom: 1px solid #fff;
-  font-family: 'Times New Roman', Arial;
 }
 
 textarea{
@@ -83,7 +85,6 @@ textarea{
   width: 600px;
   border: 0 solid #fff;
   border-bottom: 1px solid #fff;
-  font-family: 'Times New Roman', Arial;
 }
 
 button{
@@ -91,11 +92,10 @@ button{
   font-weight: bold;
   font-size: 24px;
   color: rgb(0, 0, 0);
-  width: 400px;
+  width: auto;
   border-radius: 8px;
   padding: 12px 15px;
   align-items: center;
-  font-family: 'Times New Roman', Arial;
 }
 
 .icons{
@@ -109,5 +109,5 @@ button{
   height: 100%;
   background-color: blueviolet;
   border-radius: 100%;
-  margin-right: 4px;
+  margin-right: 15px;
 }
