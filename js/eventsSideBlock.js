@@ -19,5 +19,4 @@ class EventsSideBlock {
 
         daddy.appendChild(this.element);
     }
-
 }
