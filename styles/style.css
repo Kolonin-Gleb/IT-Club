@@ -31,7 +31,6 @@ footer{
   display: flex;
   justify-content: space-evenly;
   flex-direction: row; /* горизонтальное напровление */
-  font-weight: bold;
   font-size: 24px;
 } 
 
@@ -69,7 +68,6 @@ form{
 
 input{
   background: none;
-  font-weight: bold;
   font-size: 24px;
   width: 600px;
   color: rgb(218, 218, 218);
@@ -79,7 +77,6 @@ input{
 
 textarea{
   background: none;
-  font-weight: bold;
   font-size: 24px;
   color: rgb(218, 218, 218);
   width: 600px;
@@ -89,7 +86,6 @@ textarea{
 
 button{
   background: #fff;
-  font-weight: bold;
   font-size: 24px;
   color: rgb(0, 0, 0);
   width: auto;
