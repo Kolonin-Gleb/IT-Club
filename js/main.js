@@ -86,27 +86,29 @@ mainBlock.innerHTML = eventsList[eventsList.length - 1].title;
 mainBlock.style.background = eventsList[eventsList.length - 1].background;
 // фон правого блока такой же, как у первого блока слева
 
-let height = ((0.7*vh)/3); 
-// высота одного элемента
-let count = 3; 
-// количество блоков, на которое листается список
+// let height = ((0.7*vh)/3); 
+// // высота одного элемента
+// let count = 3; 
+// // количество блоков, на которое листается список
 
-let position = height*7; 
-// координата y с которой начинается отсчёт
+// let position = height*7; 
+// // координата y с которой начинается отсчёт
 
-document.querySelector('.arrow_up').onclick = function() {
-    position += height * count; 
-    // начальная координата увеличивается на "три элемента"
-    position = Math.min(position, height * (eventsList.length - count)); 
-    // сравнение, position принимает меньшее значение: или position, посчитанный ранее, или координату предпредпредпоследнего элемента (чтобы не перематывало больше чем до последнего, а точнее до 3 с конца, элемента)
-    sideBlock.style.transform = 'translateY(' + position + 'px)';
-    // у sideBlock-а изменяется значение селектора
-};
+// document.querySelector('.arrow_up').onclick = function() {
+//     position += height * count; 
+//     // начальная координата увеличивается на "три элемента"
+//     position = Math.min(position, height * (eventsList.length - count)); 
+//     // сравнение, position принимает меньшее значение: или position, посчитанный ранее, или координату предпредпредпоследнего элемента (чтобы не перематывало больше чем до последнего, а точнее до 3 с конца, элемента)
+//     sideBlock.style.transform = 'translateY(' + position + 'px)';
+//     console.log(position)
+//     // у sideBlock-а изменяется значение селектора
+// };
 
-document.querySelector('.arrow_down').onclick = function() {
-    position -= height * count;
-    // начальная координата уменьшается на "три элемента"
-    position = Math.max(0, position); 
-    // аналогично первому, только здесь position не может быть меньше нуля, то есть координаты у последнего элемента
-    sideBlock.style.transform = 'translateY(' + position + 'px)';
-};
+// document.querySelector('.arrow_down').onclick = function() {
+//     position -= height * count;
+//     // начальная координата уменьшается на "три элемента"
+//     position = Math.max(0, position); 
+//     // аналогично первому, только здесь position не может быть меньше нуля, то есть координаты у последнего элемента
+//     sideBlock.style.transform = 'translateY(' + position + 'px)';
+// };
+

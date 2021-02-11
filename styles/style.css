@@ -19,6 +19,7 @@ body {
     
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .carousel {
@@ -54,10 +55,15 @@ body {
     outline: none;
 }
 
-.container {
+.wrapper {
     height: 70vh;
     width: 100%;
-    overflow: hidden;
+    overflow-y: hidden;
+}
+
+.container {
+    width: 100%;
+    overflow: scroll;
 }
 
 .sideBlock {
@@ -82,11 +88,11 @@ body {
 
 .mainBlock {
     height: 70vh;
-    width: 70%;
+    width: 67.5%;
 
     border-left: 25px thistle;
 
-    position: relative; /*???*/
+    position: relative;
 }
 
 .mainBlock > div {
