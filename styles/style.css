@@ -70,20 +70,27 @@ body {
     height: 70vh;
     width: 100%;
 
-    transform: translateY(calc((70vh/3)*7)); /* координата блока на уровне 3 с конца*/
-
     transition: 1s ease-in-out;
 
     display: flex;
     flex-direction: column-reverse;
 }
 
-.sideBlock > div {
+.box {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.box > div {
     min-height: calc(70vh/3);
     position: relative;
 
     display: flex;
     align-items: flex-end;
+
+    transform-origin: top center;
+    will-change: transform;
+    overflow: hidden;
 }
 
 .mainBlock {

@@ -13,7 +13,9 @@ class EventsSideBlock {
         this.title = title;
         this.text  = text;
         this.bg = background;
-        
+        this.element.classList = ["box"]
+        this.element.appendChild(document.createElement("div"));
+
         let span = Object.assign(document.createElement("span"), {innerHTML: title});
         this.element.appendChild(span);
 
