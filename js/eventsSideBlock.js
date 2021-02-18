@@ -6,15 +6,17 @@ class EventsSideBlock {
 
     set["bg"](v) {
         this.background = v;
-        this.element.style.background = v;
+        this.element.lastElementChild.style.background = v;
     }
 
     constructor({title, background, text, daddy}) {
+        console.log(this.element);
+        this.element.classList = ["box"]
+        this.element.appendChild(document.createElement("div"));
+
         this.title = title;
         this.text  = text;
         this.bg = background;
-        this.element.classList = ["box"]
-        this.element.appendChild(document.createElement("div"));
 
         let span = Object.assign(document.createElement("span"), {innerHTML: title});
         this.element.appendChild(span);

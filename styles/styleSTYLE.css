@@ -10,8 +10,8 @@ body {
 }
 
 :root {
-    --sideBlock-width: 300px;
-    --block-width: 800px;
+    --sideBlock-width: 400px;
+    --block-width: 1200px;
 }
 
 .events {
@@ -25,7 +25,7 @@ body {
 
 .blocks {
     height: inherit;
-    width: 800px;
+    width: var(--block-width);
 
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,7 @@ body {
 }
 
 .carousel {
-    height: 500px;
+    height: 700px;
     overflow: scroll;
 }
 
@@ -44,13 +44,16 @@ body {
 
 .sideBlock {
     height: auto;
-    width: 300px;
+    width: var(--sideBlock-width);
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .box{
     position: relative;
     width: inherit;
-    height: 250px;
+    height: 300px;
+    transform: translateY(150px);
     color: white;
     margin: 0 auto;
     margin-bottom: 24px;
@@ -69,6 +72,6 @@ body {
 }
 
 .mainBlock{
-    height: 500px;
-    width: calc(var(--block-width) - var(--sideBlock-width) - 20px);
+    height: 650px;
+    width: calc(var(--block-width) - var(--sideBlock-width) - 35px);
 }

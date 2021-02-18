@@ -17,17 +17,14 @@ requestAnimationFrame(() => {
       for (let i = 0; i < boxes.length; i += 1) {
         const intersection = getIntersectionRatio(i);
         const top = boxes[i].offsetTop - carousel.scrollTop < 0;
-        boxes[i].firstElementChild.style.cssText = `
-          transform-origin: ${top ? "center center" : "top center"};
-          position: ${top ? "fixed" : "absolute"};
-          transform: scale(${intersection});
-          opacity: ${intersection};
-        `;
   
-        boxes[i].firstElementChild.style = `transform-origin: ${top ? "center center" : "top center"};
+        boxes[i].firstElementChild.style = `
+        transform-origin: ${top ? "bottom center" : "top center"};
         position: ${top ? "fixed" : "absolute"};
         transform: scale(${intersection});
-        opacity: ${intersection};`;
+        opacity: ${intersection};
+        background: ${eventsList[i].background};
+        `;
   
         // boxes[i].firstChild.innerHTML = "Yay";
       }

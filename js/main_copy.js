@@ -19,56 +19,56 @@ let eventsList = [];
 // попытка сделать градацию серости фонов элементов списка, но не получилось чёта
 
 eventsList.push(
-    new EventsSideBlock({title: "kjk", 
-        background: "#fff", 
+    new EventsSideBlock({title: "llkjlkj", 
+        background: "#ffffff0", 
         text: "", 
         daddy: sideBlock
     }),
     
     new EventsSideBlock({title: "", 
-        background: "#fff", 
+        background: "#ffffff0", 
         text: "", 
         daddy: sideBlock
     }),
     
     new EventsSideBlock({title: "", 
-        background: "#fff", 
+        background: "#ffffff0", 
         text: "", 
         daddy: sideBlock
     }),
 
     new EventsSideBlock({title: "", 
-        background: "#fff", 
+        background: "#ffffff0", 
         text: "", 
         daddy: sideBlock
     }),
 
     new EventsSideBlock({title: "", 
-        background: "#fff", 
+        background: "#ffffff0", 
         text: "", 
         daddy: sideBlock
     }),
 
     new EventsSideBlock({title: "", 
-        background: "#fff", 
+        background: "#ffffff0", 
         text: "", 
         daddy: sideBlock
     }),
 
     new EventsSideBlock({title: "", 
-        background: "#fff", 
+        background: "#ffffff0", 
         text: "", 
         daddy: sideBlock
     }),
 
     new EventsSideBlock({title: "", 
-        background: "#fff", 
+        background: "#ffffff0", 
         text: "", 
         daddy: sideBlock
     }),
 
     new EventsSideBlock({title: "", 
-        background: "#fff", 
+        background: "#ffffff0", 
         text: "", 
         daddy: sideBlock
     }),
