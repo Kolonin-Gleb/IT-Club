@@ -1,17 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat700:ital,wght@1,700&display=swap');
+/* * {
+  font-family: 'Roboto', sans-serif;
+} */
 body {
     font-size: 24px; /*Default fonts for site*/
-    font-family: 'Montserrat', sans-serif;
-    background-color: #9176DE;
+    background-color: white;
     margin: 0;
 }
 
-.definition, .progects{
+.hello{
   height: 100vh;
-  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+ .titleText {
+  font-size: 200px;
+  text-align: center;
+  
+ text-transform: uppercase;
+  background:  linear-gradient(90deg, rgba(22,163,226,1) 0%, rgba(152,34,255,1) 100%);
+  
+      
+ font-family: 'Roboto', sans-serif;
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin: 0;
+  
+}
+ .definition{
+  height: 100vh;
+  background-color: #9176DE;
+  color: white;
+} 
 
 .definitiontext{
   height: calc(100vh - 368px);
@@ -19,11 +46,11 @@ body {
   flex-direction: column;
   justify-content: center;
   transform: translate(0, -20px);
-}
+} 
 
 .we {
-    text-align: center;
-    margin: 0px 20px 0 20px;
+  text-align: center;
+  margin: 0px 20px 0 20px;
 }
 
 .ITCLubTitle {
@@ -33,22 +60,93 @@ body {
     font-style: bold;
     font-weight: 700;
     margin: 0;
-}
+} 
 
-h2 {
-    text-align: center;
-    font-size: 36px;
-}
-
-p.text {
+ p.ITCLubText {
     font-size: 40px;
     padding: 0 100px 0 660px;
+    font-family: 'Montserrat', sans-serif;
     margin: 0px;
 }
 
-p.textAndPhoto {
-    display: flex;
-    margin-right: 50px;
+
+/* __________________________________FOOTER____________________________________*/
+footer{
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row; /* горизонтальное напровление */
+  font-size: 24px;
+} 
+
+.one > p{
+  font-weight: bold;
+  font-size: 90px;
+}
+
+.one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 100%;
+  padding: 140px 0;
+}
+
+.one p {
+  margin: 0;
+}
+
+.two {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 100%;
+  padding: 10% 0;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+input{
+  background: none;
+  font-size: 24px;
+  width: 600px;
+  color: rgb(218, 218, 218);
+  border: 0 solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+textarea{
+  background: none;
+  font-size: 24px;
+  color: rgb(218, 218, 218);
+  width: 600px;
+  border: 0 solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+button{
+  background: #fff;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  width: auto;
+  border-radius: 8px;
+  padding: 12px 15px;
+  align-items: center;
+}
+
+.icons{
+  display: flex;
+  height: 100px;
+  margin-top: 20px;
+    margin: 0px 20px 0 20px;
 }
 
 .icons > div {
