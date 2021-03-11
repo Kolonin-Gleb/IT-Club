@@ -10,17 +10,18 @@ class EventsSideBlock {
     }
 
     constructor({title, background, text, daddy}) {
-        console.log(this.element);
-        this.element.classList = ["box"]
-        this.element.appendChild(document.createElement("div"));
+        // console.log(this.element);
+        let element1 = this.element;
+        element1.classList = ["box"];
+        element1.appendChild(document.createElement("div"));
 
         this.title = title;
         this.text  = text;
         this.bg = background;
 
         let span = Object.assign(document.createElement("span"), {innerHTML: title});
-        this.element.appendChild(span);
+        element1.appendChild(span);
 
-        daddy.appendChild(this.element);
+        daddy.appendChild(element1);
     }
 }

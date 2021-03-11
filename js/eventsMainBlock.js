@@ -3,11 +3,10 @@ class EventsMainBlock {
     background;
     text;
 
-    // constructor(title, background, text, daddy) {
-    //     this.title      = title;
-    //     this.background = background;
-    //     this.text       = text;
-        
-    // }
+    static element;
 
+    // constructor() {
+    //     this.element = element;
+    //     console.log(typeof(element))
+    // }
 }

@@ -49,6 +49,10 @@ body {
     flex-direction: column-reverse;
 }
 
+.sideBlock > * > div {
+    cursor: pointer;
+}
+
 .box{
     position: relative;
     width: inherit;
@@ -64,7 +68,7 @@ body {
     top: 0;
     width: inherit;
     height: inherit;
-    background: linear-gradient(220deg, #3d45b1, #844efc);
+    /* background: linear-gradient(220deg, #3d45b1, #844efc); */
     
     transform-origin: top center;
     will-change: transform;
@@ -74,4 +78,8 @@ body {
 .mainBlock{
     height: 650px;
     width: calc(var(--block-width) - var(--sideBlock-width) - 35px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
 }
