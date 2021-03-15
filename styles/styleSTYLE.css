@@ -11,7 +11,7 @@ body {
 
 :root {
     --sideBlock-width: 400px;
-    --block-width: 1200px;
+    --blocks-width: 1200px;
 }
 
 .events {
@@ -25,7 +25,7 @@ body {
 
 .blocks {
     height: inherit;
-    width: var(--block-width);
+    width: var(--blocks-width);
 
     display: flex;
     justify-content: space-between;
@@ -68,16 +68,30 @@ body {
     top: 0;
     width: inherit;
     height: inherit;
-    /* background: linear-gradient(220deg, #3d45b1, #844efc); */
     
     transform-origin: top center;
     will-change: transform;
     overflow: hidden;
 }
 
+.sup_layer {
+    position: absolute;
+    top: 0;
+    height: inherit;
+    width: inherit;
+    background-color: transparent;
+    z-index: 10;
+    transition-property: background-color; 
+    transition-duration: 0.35s;
+}
+
+.sup_layer:hover {
+    background-color: #303030cc;
+}
+
 .mainBlock{
     height: 650px;
-    width: calc(var(--block-width) - var(--sideBlock-width) - 35px);
+    width: calc(var(--blocks-width) - var(--sideBlock-width) - 35px);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;

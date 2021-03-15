@@ -18,9 +18,12 @@ class EventsSideBlock {
         this.title = title;
         this.text  = text;
         this.bg = background;
+        
+        let sup_layer = Object.assign(document.createElement("div"));
+        element1.children[0].appendChild(sup_layer).classList.add('sup_layer');
 
         let span = Object.assign(document.createElement("span"), {innerHTML: title});
-        element1.appendChild(span);
+        element1.children[0].children[0].appendChild(span);
 
         daddy.appendChild(element1);
     }
