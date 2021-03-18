@@ -25,8 +25,6 @@ requestAnimationFrame(() => {
         opacity: ${intersection};
         background: ${eventsList[i].background};
         `;
-  
-        // boxes[i].firstChild.innerHTML = "Yay";
       }
       requestAnimationFrame(onScroll);
     }
