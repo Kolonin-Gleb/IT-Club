@@ -1,8 +1,10 @@
 :root {
     --sideBlock-width: 400px;
     --blocks-width: 1500px;
-    --title-height: 40px;
+    --title-height: 50px;
     --mainBlock-width: calc(var(--blocks-width) - var(--sideBlock-width) - 35px);
+    --title-background: #2b2f3b;
+    --content-background: #1c1e2bcc;
 }
 
 * {
@@ -16,6 +18,7 @@
     width: 100vw;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
 
     background-color: #181b22;
     position: relative;
@@ -87,7 +90,7 @@
     text-align: center;
     
     opacity: 0.0;
-    background-color: #303030cc;
+    background-color: var(--content-background);
     z-index: 10;
     transition-duration: 0.3s;
 }
@@ -97,10 +100,12 @@
 }
 
 .sup_layer > span {
-    background-color: #2b2f3b;
     height: 50px;
     width: inherit;
+
+    background-color: var(--title-background);
     font-size: 20px;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,6 +126,9 @@
 #content {
     height: 100%;
     width: 100%;
+
+    background-color: var(--content-background);
+
     transform: translateY(calc(100% - var(--title-height)));
     transition: 0.5s;
 }
@@ -130,12 +138,18 @@
 }
 
 #content > * {
-    padding-left: 20px;
+    padding-left: 25px;
 }
 
 #title {
     height: var(--title-height);
-    background-color: blueviolet;
     max-width: 100%;
+
+    background-color: var(--title-background);
     font-size: 30px;
+}
+
+#description {
+    padding: 10px 20px 10px 25px;
+    font-size: 22px;
 }
