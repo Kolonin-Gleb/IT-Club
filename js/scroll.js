@@ -14,10 +14,11 @@ requestAnimationFrame(() => {
   
     function onScroll() {
       var boxes = document.querySelectorAll(".box");
-      for (let i = 0; i < boxes.length; i += 1) {
+      let lastActiveElemI = 0;
+      for (let i = boxes.length - 1; i > 0; i--) {
         const intersection = getIntersectionRatio(i);
         const top = boxes[i].offsetTop - carousel.scrollTop < 0;
-  
+        
         boxes[i].firstElementChild.style = `
         transform-origin: ${top ? "bottom center" : "top center"};
         position: ${top ? "fixed" : "absolute"};
@@ -25,6 +26,16 @@ requestAnimationFrame(() => {
         opacity: ${intersection};
         background: ${eventsList[i].background};
         `;
+
+        if (intersection === 1){
+          lastActiveElemI = i;
+          console.log(`da: ${i}`);
+        }
+      }
+      if (lastActiveElemI !== activeElemI) {
+        boxes[activeElemI].classList.remove("active");
+        boxes[lastActiveElemI].classList.add("active");
+        activeElemI = lastActiveElemI;
       }
       requestAnimationFrame(onScroll);
     }

@@ -4,9 +4,4 @@ class EventsMainBlock {
     text;
 
     static element;
-
-    // constructor() {
-    //     this.element = element;
-    //     console.log(typeof(element))
-    // }
 }
