@@ -24,12 +24,11 @@ requestAnimationFrame(() => {
         position: ${top ? "fixed" : "absolute"};
         transform: scale(${intersection});
         opacity: ${intersection};
-        background: ${eventsList[i].background};
+        background-image: ${eventsList[i].background};
         `;
 
         if (intersection === 1){
           lastActiveElemI = i;
-          console.log(`da: ${i}`);
         }
       }
       if (lastActiveElemI !== activeElemI) {

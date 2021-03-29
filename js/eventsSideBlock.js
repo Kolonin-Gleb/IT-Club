@@ -6,11 +6,10 @@ class EventsSideBlock {
 
     set["bg"](v) {
         this.background = v;
-        this.element.lastElementChild.style.background = v;
+        this.element.lastElementChild.style.backgroundImage = v;
     }
 
     constructor({title, background, description, daddy}) {
-        // console.log(this.element);
         let element1 = this.element;
         element1.classList = ["box"];
         element1.appendChild(document.createElement("div"));

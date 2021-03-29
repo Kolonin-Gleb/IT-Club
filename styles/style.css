@@ -153,6 +153,10 @@ body {
   transform-origin: top center;
   will-change: transform;
   overflow: hidden;
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .sup_layer {
