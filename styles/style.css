@@ -3,12 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat700:ital,wght@1,700&display=swap');
 
 :root {
-  --sideBlock-width: 400px;
-  --blocks-width: 1500px;
-  --title-height: 50px;
-  --mainBlock-width: calc(var(--blocks-width) - var(--sideBlock-width) - 35px);
-  --title-background: #2b2f3b;
-  --content-background: #1c1e2bcc;
+  --border-width: 1.5px;
+  --box-width: 400px;
+  --sideBlock-width: calc(var(--box-width) + 2*var(--border-width));
+  --blocks-width: 1700px;
+  --title-height: 55px;
+  --mainBlock-width: calc(var(--blocks-width) - var(--sideBlock-width) - 135px);
+  --title-background: #202020;
+  --content-background: #272727cc;
 }
 
 body {
@@ -87,7 +89,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #ffffff;
 
-  background-color: #181b22;
+  background-color: #181818;
   position: relative;
 
   display: flex;
@@ -107,9 +109,18 @@ body {
   position: relative;
 }
 
+.blockDate {
+  height: 500px;
+  width: 50px;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 40px;
+}
+
 .carousel {
   height: 700px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: visible;
 }
 
 .carousel::-webkit-scrollbar { 
@@ -121,6 +132,7 @@ body {
   width: var(--sideBlock-width);
   display: flex;
   flex-direction: column-reverse;
+  overflow: visible;
 }
 
 .sideBlock > * > div {
@@ -134,14 +146,14 @@ body {
 
 .box{
   position: relative;
-  width: inherit;
+  width: var(--box-width);
   height: 300px;
   transform: translateY(150px);
   color: white;
   margin: 0 auto;
   margin-bottom: 24px;
 
-  filter: grayscale(75%)
+  filter: grayscale(85%)
 }
 
 .box > div {
@@ -152,9 +164,8 @@ body {
   
   transform-origin: top center;
   will-change: transform;
-  overflow: hidden;
-
-  background-size: 100% 100%;
+  
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -170,7 +181,6 @@ body {
   text-align: center;
   
   opacity: 0.0;
-  background-color: var(--content-background);
   z-index: 10;
   transition-duration: 0.3s;
 }
@@ -181,10 +191,13 @@ body {
 
 .active.box{
   filter: grayscale(0);
+  border-width: var(--border-width);
+  border-style: solid;
+  border-color: rgb(0, 255, 242);
 }
 
 .sup_layer > span {
-  height: 50px;
+  height: 70px;
   width: inherit;
 
   background-color: var(--title-background);
@@ -213,7 +226,7 @@ body {
 
   background-color: var(--content-background);
 
-  transform: translateY(calc(100% - var(--title-height)));
+  transform: translateY(calc(100% - var(--title-height) - 15px));
   transition: 0.5s;
 }
 
@@ -225,6 +238,7 @@ body {
   height: var(--title-height);
   max-width: 100%;
   padding-left: 25px;
+  padding-top: 15px;
 
   background-color: var(--title-background);
   font-size: 30px;
@@ -235,7 +249,7 @@ body {
   margin: 30px auto 0 auto;
   padding-bottom: 30px;
   font-size: 22px;
-  max-height: 540px;
+  max-height: 520px;
   overflow: auto;
 }
 
