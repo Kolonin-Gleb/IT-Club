@@ -27,7 +27,7 @@ eventsList.push(
 
     new EventsSideBlock({
         title: "Выступление Огурлиева Гамида \"О ИИ\" ", 
-        background: 'url(https://northeurope1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fcollegemirbis-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!7W-QcEwRP0GLzMUxc0PLJltyyaV0FSZFmeICzCrZKXm79JVJyjxASZjpY5gAN7a0%2Fitems%2F01FYKKOPLH3S5OMPGS5BCZAHL3NE6BC52Z%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvY29sbGVnZW1pcmJpcy1teS5zaGFyZXBvaW50LmNvbUBhNWU3NTJkMi1kOTM3LTQxMmEtYjU4Mi0yNTViMTI3MmQyOGMiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjE3MDMwMDAwIiwiZXhwIjoiMTYxNzA1MTYwMCIsImVuZHBvaW50dXJsIjoiWTc3cW92NFhXOGthYkZqWXhkenducEMvS1JJYWlJTGhBU3dwNWlaWVdJWT0iLCJlbmRwb2ludHVybExlbmd0aCI6IjEyMyIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6Ik56QTVNRFptWldRdE1URTBZeTAwTVRObUxUaGlZMk10WXpVek1UY3pORE5qWWpJMiIsIm5hbWVpZCI6IjAjLmZ8bWVtYmVyc2hpcHxrb2xvbmluZ3MyMEBzdC5pdGh1Yi5ydSIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAwZGUwNjhiMTJAbGl2ZS5jb20iLCJ0dCI6IjAiLCJ1c2VQZXJzaXN0ZW50Q29va2llIjoiMiJ9.QWowZmMyR080MmtvUFFpZVBMUkhyN1M2R3d4NkVHeW9KK0xuUjkyT3N4dz0&encodeFailures=1&width=1920&height=897&srcWidth=&srcHeight=)',
+        background: 'url(images/gallery_of_events/1_Semestr/1_Gamid_about_AI.jpg)',
         description:    
         "Октябрь 2020 года. <br> Одно из первых выступлений в клубе. <br> Студент 3 курса направления Программирование - Огурлиев Гамид согласился выступить и рассказать нам о Искуственном интелекте. <br> Его презентация была интересной и он ответил на все наши вопросы.",
         daddy: sideBlock
@@ -35,25 +35,27 @@ eventsList.push(
 
     new EventsSideBlock({
         title: "Изучение устройства ПК", 
-        background: "url(https://northeurope1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fcollegemirbis-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!7W-QcEwRP0GLzMUxc0PLJltyyaV0FSZFmeICzCrZKXm79JVJyjxASZjpY5gAN7a0%2Fitems%2F01FYKKOPMVSQACN5PFDNH2IT4O4L5PIZKO%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvY29sbGVnZW1pcmJpcy1teS5zaGFyZXBvaW50LmNvbUBhNWU3NTJkMi1kOTM3LTQxMmEtYjU4Mi0yNTViMTI3MmQyOGMiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjE3MDMwMDAwIiwiZXhwIjoiMTYxNzA1MTYwMCIsImVuZHBvaW50dXJsIjoiWTc3cW92NFhXOGthYkZqWXhkenducEMvS1JJYWlJTGhBU3dwNWlaWVdJWT0iLCJlbmRwb2ludHVybExlbmd0aCI6IjEyMyIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6Ik56QTVNRFptWldRdE1URTBZeTAwTVRObUxUaGlZMk10WXpVek1UY3pORE5qWWpJMiIsIm5hbWVpZCI6IjAjLmZ8bWVtYmVyc2hpcHxrb2xvbmluZ3MyMEBzdC5pdGh1Yi5ydSIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAwZGUwNjhiMTJAbGl2ZS5jb20iLCJ0dCI6IjAiLCJ1c2VQZXJzaXN0ZW50Q29va2llIjoiMiJ9.QWowZmMyR080MmtvUFFpZVBMUkhyN1M2R3d4NkVHeW9KK0xuUjkyT3N4dz0&encodeFailures=1&width=1920&height=897&srcWidth=&srcHeight=)", 
+        background: "url(images/gallery_of_events/1_Semestr/2_PC_system.jpg)", 
         description: "Октябрь 2020 года. <br> Колонин Глеб принес старый офисный компьютер. <br> Вместе мы изучили его устройство и узнали какими кабелями куда нужно подключать его комплектующие.", 
         daddy: sideBlock
     }),
 
     new EventsSideBlock({
-        title: "теневое клонирование", 
-        background: "url(https://memepedia.ru/wp-content/uploads/2018/09/stock-photo-backstabber-original-360x270.jpg)", 
-        description: "йоу собаки я наруто узумаки", 
+        title: "Мастер-класс Геворкяна Марата по C#", 
+        background: "url(images/gallery_of_events/1_Semestr/3_Marat_Csharp.jpg)", 
+        description: "Декарь 2020 года. <br> Геворкян Марат подготовил презентацию и провел мастер-класс по C#. <br> По окончанию мастер-класса мы создали калькуляторы.", 
         daddy: sideBlock
     }),
     
     new EventsSideBlock({
-        title: "смешно смешно смешно смешно", 
-        background: "url(https://st.focusedcollection.com/11440334/i/650/focused_143164391-stock-photo-business-people-communicating-in-office.jpg)", 
-        description: "смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешнo смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешно смешнo", 
+        title: "Мастер-класс Колонина Глеба по Основам git и GitHub", 
+        background: "url(images/gallery_of_events/1_Semestr/4_Gleb_GitHub.jpg)", 
+        description: "Декарь 2020 года. <br> Колонин Глеб подготовил презентацию и провел мастер-класс по \"Основам git и GitHub\". <br> В конце дал рекомендации и ресурсы для дальнейшего изучения.", 
         daddy: sideBlock
     }),
     
+    // 2 Semestr
+
     new EventsSideBlock({
         title: "sugar daddy", 
         background: "url(https://birdinflight.imgix.net/wp-content/uploads/2019/02/moose-2.png?auto=format&q=70&fit=crop&crop=faces)", 
