@@ -1,19 +1,342 @@
-body {
-    font-size: 24px; /*Default fonts for site*/
-    font-family: 'Times New Roman', Arial;
-}
-.titleText {
-    font-size: 200px;
-    text-align: center;
-    
-   text-transform: uppercase;
-    background:  linear-gradient(90deg, rgba(22,163,226,1) 0%, rgba(152,34,255,1) 100%);
-    
-        
-   font-family: 'Montserrat', sans-serif;
-    
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-  }
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat700:ital,wght@1,700&display=swap');
 
+:root {
+  --border-width: 1.5px;
+  --box-width: 400px;
+  --sideBlock-width: calc(var(--box-width) + 2*var(--border-width));
+  --blocks-width: 1700px;
+  --title-height: 55px;
+  --mainBlock-width: calc(var(--blocks-width) - var(--sideBlock-width) - 135px);
+  --title-background: #202020;
+  --content-background: #272727cc;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.hello{
+  font-size: 24px;
+  background-color: white;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ .titleText {
+  font-size: 200px;
+  text-align: center;
+  
+ text-transform: uppercase;
+  background:  linear-gradient(90deg, rgba(22,163,226,1) 0%, rgba(152,34,255,1) 100%);
+  
+      
+ font-family: 'Roboto', sans-serif;
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin: 0;
+  
+}
+ .definition{
+  height: 100vh;
+  background-color: #9176DE;
+  color: white;
+} 
+
+.definitiontext{
+  height: calc(100vh - 368px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate(0, -20px);
+} 
+
+.we {
+  text-align: center;
+  margin: 0px 20px 0 20px;
+}
+
+.ITCLubTitle {
+  font-size: 150px;
+  padding-left: 260px;
+  font-family: 'Montserrat700', sans-serif;
+  font-style: bold;
+  font-weight: 700;
+  margin: 0;
+} 
+
+ p.ITCLubText {
+  font-size: 40px;
+  padding: 0 100px 0 660px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0px;
+}
+
+
+/* ________________________ГАЛЕРЕЯ_______________________________ */
+
+.events {
+  height: 100vh;
+  width: 100%;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+
+  background-color: #181818;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+.blocks {
+  height: inherit;
+  width: var(--blocks-width);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.blockDate {
+  height: 500px;
+  width: 50px;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 40px;
+}
+
+.carousel {
+  height: 700px;
+  overflow-y: scroll;
+  overflow-x: visible;
+}
+
+.carousel::-webkit-scrollbar { 
+  width: 0; 
+}
+
+.sideBlock {
+  height: auto;
+  width: var(--sideBlock-width);
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: visible;
+}
+
+.sideBlock > * > div {
+  cursor: pointer;
+}
+
+.sideBlock > .box:last-child() > div{
+  cursor: default;
+  background-color: #9176DE;
+}
+
+.box{
+  position: relative;
+  width: var(--box-width);
+  height: 300px;
+  transform: translateY(150px);
+  color: white;
+  margin: 0 auto;
+  margin-bottom: 24px;
+
+  filter: grayscale(85%)
+}
+
+.box > div {
+  position: absolute;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  
+  transform-origin: top center;
+  will-change: transform;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sup_layer {
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  top: 0;
+
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  
+  opacity: 0.0;
+  z-index: 10;
+  transition-duration: 0.3s;
+}
+
+.active .sup_layer:hover {
+  opacity: 1.0;  
+}
+
+.active.box{
+  filter: grayscale(0);
+  border-width: var(--border-width);
+  border-style: solid;
+  border-color: rgb(0, 255, 242);
+}
+
+.sup_layer > span {
+  height: 70px;
+  width: inherit;
+
+  background-color: var(--title-background);
+  font-size: 20px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainBlock{
+  height: 650px;
+  width: var(--mainBlock-width);
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+#content {
+  height: 100%;
+  width: 100%;
+
+  background-color: var(--content-background);
+
+  transform: translateY(calc(100% - var(--title-height) - 15px));
+  transition: 0.5s;
+}
+
+#content:hover {
+  transform: translateY(0);
+}
+
+#title {
+  height: var(--title-height);
+  max-width: 100%;
+  padding-left: 25px;
+  padding-top: 15px;
+
+  background-color: var(--title-background);
+  font-size: 30px;
+}
+
+#description {
+  width: calc(100% - 160px);
+  margin: 30px auto 0 auto;
+  padding-bottom: 30px;
+  font-size: 22px;
+  max-height: 520px;
+  overflow: auto;
+}
+
+
+/* __________________________________FOOTER____________________________________*/
+footer{
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row; /* горизонтальное напровление */
+  font-size: 24px;
+} 
+
+footer > .info > p{
+  font-weight: bold;
+  font-size: 90px;
+}
+
+footer > .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 100%;
+  padding: 140px 0;
+}
+
+footer > .info p {
+  margin: 0;
+}
+
+.formWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 100%;
+  padding: 10% 0;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+input{
+  background: none;
+  font-size: 24px;
+  width: 600px;
+  color: rgb(218, 218, 218);
+  border: 0 solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+textarea{
+  background: none;
+  font-size: 24px;
+  color: rgb(218, 218, 218);
+  width: 600px;
+  border: 0 solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+button{
+  background: #fff;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  width: auto;
+  border-radius: 8px;
+  padding: 12px 15px;
+  align-items: center;
+}
+
+.icons{
+  display: flex;
+  height: 100px;
+  margin-top: 20px;
+    margin: 0px 20px 0 20px;
+}
+
+.icons > div {
+  width: 100px;
+  height: 100%;
+  background-color: blueviolet;
+  border-radius: 100%;
+  margin-right: 15px;
+}
