@@ -85,24 +85,24 @@ body {
 .events {
   height: 100vh;
   width: 100%;
-
+  
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #ffffff;
-
+  
   background-color: #181818;
   position: relative;
-
+  
   display: flex;
   justify-content: center;
   align-items: center;
-
+  
   box-sizing: border-box;
 }
 
 .blocks {
   height: inherit;
   width: var(--blocks-width);
-
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,13 +117,13 @@ body {
   font-size: 40px;
 }
 
-.carousel {
+.carouselGallery {
   height: 700px;
   overflow-y: scroll;
   overflow-x: visible;
 }
 
-.carousel::-webkit-scrollbar { 
+.carouselGallery::-webkit-scrollbar { 
   width: 0; 
 }
 
@@ -141,7 +141,6 @@ body {
 
 .sideBlock > .box:last-child() > div{
   cursor: default;
-  background-color: #9176DE;
 }
 
 .box{
@@ -152,7 +151,7 @@ body {
   color: white;
   margin: 0 auto;
   margin-bottom: 24px;
-
+  
   filter: grayscale(85%)
 }
 
@@ -175,7 +174,7 @@ body {
   width: inherit;
   position: absolute;
   top: 0;
-
+  
   display: flex;
   align-items: flex-end;
   text-align: center;
@@ -199,7 +198,7 @@ body {
 .sup_layer > span {
   height: 70px;
   width: inherit;
-
+  
   background-color: var(--title-background);
   font-size: 20px;
   
@@ -223,9 +222,9 @@ body {
 #content {
   height: 100%;
   width: 100%;
-
+  
   background-color: var(--content-background);
-
+  
   transform: translateY(calc(100% - var(--title-height) - 15px));
   transition: 0.5s;
 }
@@ -239,7 +238,7 @@ body {
   max-width: 100%;
   padding-left: 25px;
   padding-top: 15px;
-
+  
   background-color: var(--title-background);
   font-size: 30px;
 }
@@ -253,6 +252,64 @@ body {
   overflow: auto;
 }
 
+/* ________________________ПРОЕКТЫ_______________________________ */
+
+.projects {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  
+  background-color: #181818;
+}
+
+.projectPhoto {
+  height: 100%;
+  width: 590px;
+  
+  background-color: #443d5a;
+}
+
+.descWrapper{
+  height: 100%;
+  width: calc(100% - 590px);
+  /* display: flex; */
+}
+
+.projectDesc {
+  height: calc(100vh - 400px);
+  width: calc(100% - 120px);
+  margin: 160px 75px 240px 45px;
+  background-color: #181818;
+  border: 1px solid #ffffff;
+}
+
+/* ________________________УЧАСТНИКИ_______________________________ */
+
+.members {
+  height: 100vh;
+  width: 100%;
+  background-color: #181818;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carouselMembers {
+  height: calc(100vh - 200px);
+  width: calc(100% - 300px);
+  border: 1px solid #ffffff;
+}
+
+.memberBlock {
+  height: inherit;
+  width: 100%;
+}
+
+.memberBlock > div {
+  height: 500px;
+  width: 500px;
+  background-color: #665858;
+}
 
 /* __________________________________FOOTER____________________________________*/
 footer{

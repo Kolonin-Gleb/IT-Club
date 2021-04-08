@@ -1,6 +1,6 @@
 requestAnimationFrame(() => {
     const boxes = document.querySelectorAll(".box");
-    let carousel = document.getElementById("carousel")
+    let carousel = document.getElementById("carouselGallery")
 
     function getIntersectionRatio(i) {
       const a = [carousel.scrollTop, carousel.scrollTop + carousel.clientHeight]; 

@@ -9,7 +9,7 @@ function Oliver(index) {
         document.getElementById("title").innerHTML = eventsList[index].title;
         document.getElementById("description").innerHTML = eventsList[index].description;
         mainBlock.style.backgroundImage = eventsList[index].background;
-        eventsList[index].element.scrollIntoView({block: "center", behavior: "smooth"})
+        eventsList[index].element.scrollIntoView({block: "center", behavior: "smooth"});
     }
 }
 
@@ -65,7 +65,7 @@ eventsList.push(
         semester: '1-ый семестр'
     }),
     
-    // 2 Semestr
+    // 2 Semester
 
     new EventsSideBlock({
         title: "Создание карты сайта. Совет Молодоря Никиты", 
@@ -119,15 +119,10 @@ eventsList.push(
         daddy: sideBlock,
         year: 2021,
         semester: '2-ой семестр'
-    }),
-    
+    })
 );
 
-Oliver(eventsList.length - 1);
-// заголовок главного блока равен первому слева
-
 mainBlock.style.backgroundImage = eventsList[eventsList.length - 1].background;
-// фон правого блока такой же, как у первого блока слева
 
 for(let index = 0; index < eventsList.length; index++){
     document.getElementById("sideBlock").children[index].children[0].addEventListener("click", function() {Oliver(index);});
