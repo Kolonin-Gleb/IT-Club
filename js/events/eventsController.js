@@ -1,8 +1,5 @@
 let sideBlock = document.getElementById("sideBlock");
 let mainBlock = document.getElementById("mainBlock");
-const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-// принимается разрешение экрана пользователя, для дальнейшего вычисления размера блока, относительно высоты viewport-а 
 
 function Oliver(index) {
     if (index !== 0){

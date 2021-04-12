@@ -1,26 +1,32 @@
-class Members{
+class Member{
     element = document.createElement("div");
     name;
     age;
     faculty;
     photo;
-    skills;
+    abstract;
     cvLink;
-
-    constructor({name, age, faculty, photo, skills, cvLink, daddy}) {
-        let element1 = this.element;
-        // element1.classList = ["box"];
-        // element1.appendChild(document.createElement("div"));
-
-        console.log("лол приветули");
-
+    
+    constructor({name, age, faculty, photo, abstract, cvLink, daddy}) {
+        let element = this.element;
+        const template = document.getElementById("member_template").content.cloneNode(true);
+        
         this.name = name;
         this.age = age;
         this.faculty = faculty;
         this.photo = photo;
-        this.skills = skills;
+        this.abstract = abstract;
         this.cvLink = cvLink;
+        
+        template.querySelector(".member_faculty").innerHTML = faculty;
+        template.querySelector(".member_name").innerHTML = name;
+        template.querySelector(".member_age").innerHTML = age;
+        template.querySelector(".member_photo").innerHTML = photo;
+        template.querySelector(".member_desc").innerHTML = abstract;
+        template.querySelector(".member_cv").innerHTML = cvLink;
 
-        daddy.appendChild(element1);
+        element.appendChild(template);
+
+        daddy.appendChild(element);
     }
 }
