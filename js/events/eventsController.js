@@ -120,6 +120,8 @@ eventsList.push(
 );
 
 mainBlock.style.backgroundImage = eventsList[eventsList.length - 1].background;
+document.getElementById("title").innerHTML = eventsList[eventsList.length - 1].title;
+document.getElementById("description").innerHTML = eventsList[eventsList.length - 1].description;
 
 for(let index = 0; index < eventsList.length; index++){
     document.getElementById("sideBlock").children[index].children[0].addEventListener("click", function() {Oliver(index);});

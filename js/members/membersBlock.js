@@ -9,8 +9,8 @@ class Member{
     
     constructor({name, age, faculty, photo, abstract, cvLink, daddy}) {
         let element = this.element;
-        const template = document.getElementById("member_template").content.cloneNode(true);
-        
+        let template = document.getElementById("member_template").content.cloneNode(true);
+
         this.name = name;
         this.age = age;
         this.faculty = faculty;
