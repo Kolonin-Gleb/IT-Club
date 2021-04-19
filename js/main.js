@@ -123,11 +123,9 @@ eventsList.push(
     
 );
 
-Oliver(eventsList.length - 1);
-// заголовок главного блока равен первому слева
-
 mainBlock.style.backgroundImage = eventsList[eventsList.length - 1].background;
-// фон правого блока такой же, как у первого блока слева
+document.getElementById("title").innerHTML = eventsList[eventsList.length - 1].title;
+document.getElementById("description").innerHTML = eventsList[eventsList.length - 1].description;
 
 for(let index = 0; index < eventsList.length; index++){
     document.getElementById("sideBlock").children[index].children[0].addEventListener("click", function() {Oliver(index);});
