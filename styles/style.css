@@ -314,21 +314,22 @@ body {
 }
 
 .member_card {
-  max-height: inherit;
+  height: calc(100% - 130px);
+  max-height: 100%;
   margin: 80px 40px 50px 80px;
 }
 
 .member_face {
   display: flex;
   justify-content: space-between;
-  height: 100px;
+  height: 50%;
 }
 
 .member_photo {
   height: 150px;
   width: 150px;
   border-radius: 100px;
-  background-image: url(http://pngimg.com/uploads/face/face_PNG5669.png);
+  margin-left: 50px;
 }
 
 .short_bio {
@@ -346,6 +347,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.member_abstract > a {
+  text-align: right;
 }
 
 /* __________________________________FOOTER____________________________________*/

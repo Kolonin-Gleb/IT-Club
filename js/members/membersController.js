@@ -1,6 +1,4 @@
 let memberBlock = document.getElementById("memberBlock");
-let memberPhoto = document.querySelector(".member_photo")
-console.log(memberPhoto)
 
 let membersList = [];
 
@@ -26,14 +24,12 @@ membersList.push(
     // }),
 
     new Member({
-        name: "Дэнчик", 
+        name: "Шахиджанян Владимир Владимирович", 
         age: "16", 
         faculty: "Программист", 
-        photo: "",
+        photo: "http://pngimg.com/uploads/face/face_PNG5669.png",
         abstract: "рассказывает анекдоты на высшем уровне",
         cvLink: "*ссылка*",
         daddy: memberBlock
     })
 );
-
-memberPhoto.style.backgroundImage = 
