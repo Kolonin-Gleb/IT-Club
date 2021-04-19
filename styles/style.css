@@ -262,7 +262,7 @@ footer{
   height: 800px;
   display: flex;
   justify-content: space-evenly;
-  flex-direction: row; /* горизонтальное напровление */
+  flex-direction: row;
   font-size: 24px;
 } 
 
