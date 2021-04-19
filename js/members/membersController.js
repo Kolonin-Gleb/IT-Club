@@ -1,4 +1,6 @@
 let memberBlock = document.getElementById("memberBlock");
+let memberPhoto = document.querySelector(".member_photo")
+console.log(memberPhoto)
 
 let membersList = [];
 
@@ -33,3 +35,5 @@ membersList.push(
         daddy: memberBlock
     })
 );
+
+memberPhoto.style.backgroundImage = 
