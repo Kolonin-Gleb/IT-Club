@@ -21,7 +21,7 @@ eventsList.push(
         description: "", 
         daddy: sideBlock,
         year: 2020,
-        semester: '1-ый семестр'
+        term: '1-ый семестр'
         
     }),
 
@@ -32,7 +32,7 @@ eventsList.push(
         `Октябрь 2020 года. <br> Одно из первых выступлений в клубе. <br> Студент 3 курса направления Программирование - Огурлиев Гамид согласился выступить и рассказать нам о Искуственном интелекте. <br> Его презентация была интересной и он ответил на все наши вопросы.  Презентацию с выступления можно найти по ссылке: <a href="https://collegemirbis-my.sharepoint.com/:f:/g/personal/kolonings20_st_ithub_ru/Ek9_k5hUipBPsN6bs3-i6B8B0L2SMJeYB5UHHC4MlT8c5g" target="_blank"> Открыть </a> <br>`,
         daddy: sideBlock,
         year: 2020,
-        semester: '1-ый семестр'
+        term: '1-ый семестр'
     }),
 
     new EventsSideBlock({
@@ -41,7 +41,7 @@ eventsList.push(
         description: "Октябрь 2020 года. <br> Колонин Глеб принес старый офисный компьютер. <br> Вместе мы изучили его устройство и узнали какими кабелями куда нужно подключать его комплектующие.", 
         daddy: sideBlock,
         year: 2020,
-        semester: '1-ый семестр'
+        term: '1-ый семестр'
     }),
 
     new EventsSideBlock({
@@ -50,7 +50,7 @@ eventsList.push(
         description: `Декарь 2020 года. <br> Геворкян Марат подготовил презентацию и провел мастер-класс по C#. <br> По окончанию мастер-класса мы создали калькуляторы. Презентацию с выступления можно найти по ссылке: <a href="https://collegemirbis-my.sharepoint.com/:f:/g/personal/kolonings20_st_ithub_ru/Ek9_k5hUipBPsN6bs3-i6B8B0L2SMJeYB5UHHC4MlT8c5g" target="_blank"> Открыть </a> <br>`, 
         daddy: sideBlock,
         year: 2020,
-        semester: '1-ый семестр'
+        term: '1-ый семестр'
     }),
     
     new EventsSideBlock({
@@ -59,10 +59,10 @@ eventsList.push(
         description: `Декарь 2020 года. <br> Колонин Глеб подготовил презентацию и провел мастер-класс по \"Основам git и GitHub\". <br> В конце дал рекомендации и ресурсы для дальнейшего изучения. Презентацию с выступления можно найти по ссылке: <a href="https://collegemirbis-my.sharepoint.com/:f:/g/personal/kolonings20_st_ithub_ru/Ek9_k5hUipBPsN6bs3-i6B8B0L2SMJeYB5UHHC4MlT8c5g" target="_blank"> Открыть </a> <br>`, 
         daddy: sideBlock,
         year: 2020,
-        semester: '1-ый семестр'
+        term: '1-ый семестр'
     }),
     
-    // 2 Semester
+    // 2 term
 
     new EventsSideBlock({
         title: "Создание карты сайта", 
@@ -70,7 +70,7 @@ eventsList.push(
         description: "Январь 2020 года. <br> Молодоря Никита помог с созданием карты сайта для нашего совместного проекта - сайта IT Club. <br> Все изменения, вносимые на сайт, что вы сейчас смотрите сначала тщательно продумываются на этой карте.", 
         daddy: sideBlock,
         year: 2021,
-        semester: '2-ой семестр'
+        term: '2-ой семестр'
     }),
 
     new EventsSideBlock({
@@ -79,7 +79,7 @@ eventsList.push(
         description: "Январь 2020 года. <br> Игорь Молчанов рассказал нам о сетевом протоколе SSH.", 
         daddy: sideBlock,
         year: 2021,
-        semester: '2-ой семестр'
+        term: '2-ой семестр'
     }),
 
     new EventsSideBlock({
@@ -88,7 +88,7 @@ eventsList.push(
         description: "Февраль 2021 года. <br> Ефим Ланцман - студент-разработчик 2 курса провел мастер-класс по Unity. <br> По итогам мастер-класса мы написали код на C#, узнали что такое игровые движки и поработали в Unity.", 
         daddy: sideBlock,
         year: 2021,
-        semester: '2-ой семестр'
+        term: '2-ой семестр'
     }),
 
     new EventsSideBlock({
@@ -97,7 +97,7 @@ eventsList.push(
         description: "Февраль 2021 года. <br> Степанов Александр - программист 1 курса провел мастер-класс по работе с WordPress и OpenServer. <br> Мастер-класс был очень интересным и полезным. <br> Степанов Алексндр помог нам решить все появившиеся сложности и ответил на все наши вопросы.", 
         daddy: sideBlock,
         year: 2021,
-        semester: '2-ой семестр'
+        term: '2-ой семестр'
     }),
 
     new EventsSideBlock({
@@ -106,7 +106,7 @@ eventsList.push(
         description: `Март 2021 года. <br> Молодоря Никита - провел мастер-класс по программированию на Swift. <br> В течении мастер-класса велась разработка мобильного приложения, <br> которое следило за котировками валют. Презентацию с выступления можно найти по ссылке: <a href="https://collegemirbis-my.sharepoint.com/:f:/g/personal/kolonings20_st_ithub_ru/Ek9_k5hUipBPsN6bs3-i6B8B0L2SMJeYB5UHHC4MlT8c5g" target="_blank"> Открыть </a> <br>`, 
         daddy: sideBlock,
         year: 2021,
-        semester: '2-ой семестр'
+        term: '2-ой семестр'
     }),
 
     new EventsSideBlock({
@@ -115,7 +115,7 @@ eventsList.push(
         description: "Март 2021 года. <br> Ефим Ланцман провел мастер-класс по 3D моделированию в Blender. <br> В результате мастер-класса были созданы модели средневековых мечей и освоены основы интерфеййса программы Blender 3D. <br> Ефим поделился материалами для дальнейшего изучения 3D моделирования.", 
         daddy: sideBlock,
         year: 2021,
-        semester: '2-ой семестр'
+        term: '2-ой семестр'
     }),
 
     new EventsSideBlock({
@@ -124,7 +124,7 @@ eventsList.push(
         description: `12 Апреля 2021 года. <br> Квашин Николай провел выступление, на котором рассказал об эффективной сортировке merge-sort. Был разобран код, который реализует данную сортировку, а также её преимущества. <br> Презентацию с выступления можно найти по ссылке: <a href="https://collegemirbis-my.sharepoint.com/:f:/g/personal/kolonings20_st_ithub_ru/Ek9_k5hUipBPsN6bs3-i6B8B0L2SMJeYB5UHHC4MlT8c5g" target="_blank"> Открыть </a> <br>`,
         daddy: sideBlock,
         year: 2021,
-        semester: '2-ой семестр'
+        term: '2-ой семестр'
     }),
 
     new EventsSideBlock({
@@ -133,7 +133,7 @@ eventsList.push(
         description: `22 Апреля 2021 года. <br> Колонин Глеб выступил по теме Основы финансовой грамотности и Инвестирования. <br> Он ответил на вопросы аудитории, поделился своим опытом инвестирования и дал ресурсы дя дальнейшего изучения темы. <br> Презентацию с выступления можно найти по ссылке: <a href="https://collegemirbis-my.sharepoint.com/:f:/g/personal/kolonings20_st_ithub_ru/Ek9_k5hUipBPsN6bs3-i6B8B0L2SMJeYB5UHHC4MlT8c5g" target="_blank"> Открыть </a> <br>`,
         daddy: sideBlock,
         year: 2021,
-        semester: '2-ой семестр'
+        term: '2-ой семестр'
     })
 );
 
