@@ -233,6 +233,14 @@ body {
   transform: translateY(0);
 }
 
+#description > a {
+  color: #ffffff;
+}
+
+#description > a:focus {
+  outline: none;
+}
+
 #title {
   height: var(--title-height);
   max-width: 100%;
@@ -298,7 +306,6 @@ body {
 .carouselMembers {
   height: calc(100vh - 300px);
   width: calc(100% - 300px);
-  overflow-y: hidden;
 }
 
 .memberBlock {
@@ -306,34 +313,44 @@ body {
   height: inherit;
   width: auto;
   display: flex;
-  height: 600px;
-  overflow: hidden;
+  height: 650px;
 }
 
 .memberBlock > button.slick-arrow {
   position: absolute;
   z-index: 100;
-  height: 40px;
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+  border-radius: 50px;
   top: calc(50% - 20px);
 }
+
+.memberBlock > button.slick-arrow:focus {
+  outline: none;
+}
+
 .memberBlock > button.slick-prev {
   left: 0;
+  transform: translateX(calc(-100% - 30px));
 }
+
 .memberBlock > button.slick-next {
   right: 0;
+  transform: translateX(calc(100% + 30px));
 }
 
 .memberBox {
   overflow: auto;
-  height: 600px;
+  height: 650px;
   width: 100%;
   background-color: #5f5f5f;
 }
 
 .member_card {
-  height: calc(100% - 150px);
+  height: calc(100% - 135px);
   max-height: 100%;
-  margin: 80px 50px 70px 110px;
+  margin: 65px 70px 70px 110px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -342,19 +359,19 @@ body {
 .member_face {
   display: flex;
   justify-content: space-between;
-  height: 40%;
+  height: 50%;
 }
 
 .member_photo {
   height: 100%;
   width: auto;
-  margin-left: 50px;
+  margin-left: 70px;
 }
 
 .short_bio {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-end;
 }
 
