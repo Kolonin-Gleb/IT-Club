@@ -4,11 +4,11 @@ let membersList = [];
 
 membersList.push(
     new Member({
-        name: "Хохлова Зоя Анатольевна", 
+        name: "Колонин Глеб Семёнович", 
         age: "16", 
-        faculty: "Разработчица", 
-        photo: "https://aif-s3.aif.ru/images/013/568/674f8c2ce9d3b1701fd367d54915598a.jpg",
-        abstract: "рассказывает анекдоты на высшем уровне",
+        faculty: "Программист", 
+        photo: '', //Нужно брать картинку из папки gallery_of_members
+        abstract: "Программирует на С++. Имеет личные проекты на github",
         cvLink: "*ссылка*",
         daddy: memberBlock
     }),
