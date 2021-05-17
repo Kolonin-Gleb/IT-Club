@@ -7,29 +7,33 @@ membersList.push(
         name: "Колонин Глеб Семёнович", 
         age: "16", 
         faculty: "Программист", 
-        photo: '', //Нужно брать картинку из папки gallery_of_members
+        photo: 'images/gallery_of_members/Gleb.jpg',
         abstract: "Программирует на С++. Имеет личные проекты на github",
         cvLink: "*ссылка*",
+        cvLinkaddress: "",
         daddy: memberBlock
     }),
     
     new Member({
-        name: "Виноградова Юлианна Анастасьевна", 
+        name: "Геворкян Марат Вачаганович", 
         age: "17", 
         faculty: "Айтишница", 
-        photo: "https://st2.depositphotos.com/1024381/5201/i/600/depositphotos_52013547-stock-photo-mid-adult-woman.jpg",
-        abstract: "рассказывает анекдоты на высшем уровне",
+        photo: "images/gallery_of_members/Marat.jpg", 
+        // сверху образец добавления картинки из папки (относительный путь)
+        abstract: "",
         cvLink: "*ссылка*",
+        cvLinkaddress: "https://vk.com/da_ili_dada",
         daddy: memberBlock
     }),
 
     new Member({
-        name: "Шахиджанян Владимир Владимирович", 
+        name: "Манойлович Мелания", 
         age: "16", 
         faculty: "Программист", 
-        photo: "https://wl-adme.cf.tsp.li/resize/728x/jpg/72a/ea0/057bce523498aa17e4f3a9d074.jpg",
-        abstract: "рассказывает анекдоты на высшем уровне рассказывает анекдоты на высшем уровне рассказывает",
+        photo: "images/gallery_of_members/Melanie.jpg",
+        abstract: "",
         cvLink: "*ссылка*",
+        cvLinkaddress: "",
         daddy: memberBlock
     })
 );
