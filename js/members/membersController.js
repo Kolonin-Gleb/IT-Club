@@ -8,7 +8,7 @@ membersList.push(
         age: "16", 
         faculty: "Программист", 
         photo: "images/gallery_of_members/Gleb.jpg",
-        abstract: "Программирую на С++. Есть личные проекты на github",
+        abstract: "Программирую на С++. Есть личные проекты на github.",
         cvLink: "Посмотреть резюме",
         cvLinkAddress: "https://collegemirbis-my.sharepoint.com/:b:/g/personal/kolonings20_st_ithub_ru/EQd4OXF3sx5OuM-yZiBM8kcBNVxw2Yro9JSBxWW6jGvCEw?e=JkRuhQ",
         daddy: memberBlock
@@ -19,7 +19,7 @@ membersList.push(
         age: "17", 
         faculty: "Программист", 
         photo: "images/gallery_of_members/Marat.jpg", 
-        abstract: "",
+        abstract: "Свободно говорю на C#. Лично знаком с асинхронностью и абстракциями ;)",
         cvLink: "Посмотреть резюме",
         cvLinkAddress: "https://collegemirbis-my.sharepoint.com/:w:/g/personal/kolonings20_st_ithub_ru/EWBpbCk4ZFRKha4Xaph7O34BLj2rVNLHCsEWMuW0-0d5kQ?e=ReT7DI",
         daddy: memberBlock
@@ -85,18 +85,7 @@ membersList.push(
         age: "16", 
         faculty: "Программист", 
         photo: "images/gallery_of_members/Melanie.jpg",
-        abstract: "",
-        cvLink: "Посмотреть резюме",
-        cvLinkAddress: "#",
-        daddy: memberBlock
-    }),
-
-    new Member({
-        name: "Ален Асатрян", 
-        age: "16", 
-        faculty: "Программист", 
-        photo: "",
-        abstract: "",
+        abstract: "Программирую на Python, начала изучать C++. Владею математическим *как и английским* языком на уровне B2",
         cvLink: "Посмотреть резюме",
         cvLinkAddress: "#",
         daddy: memberBlock
