@@ -7,7 +7,7 @@ class Member{
     abstract;
     cvLink;
     
-    constructor({name, age, faculty, photo, abstract, cvLink, cvLinkaddress, daddy}) {
+    constructor({name, age, faculty, photo, abstract, cvLink, cvLinkAddress, daddy}) {
         let element = this.element;
         let template = document.getElementById("member_template").content.cloneNode(true);
 
@@ -19,7 +19,7 @@ class Member{
         this.photo = photo;
         this.abstract = abstract;
         this.cvLink = cvLink;
-        this.cvLinkaddress = cvLinkaddress;
+        this.cvLinkAddress = cvLinkAddress;
         
         template.querySelector(".member_faculty").innerHTML = faculty;
         template.querySelector(".member_name").innerHTML = name;
@@ -29,7 +29,7 @@ class Member{
 
         let elementLink = template.querySelector(".member_cv");
         elementLink.innerHTML = cvLink;
-        elementLink.setAttribute("href", cvLinkaddress)
+        elementLink.setAttribute("href", cvLinkAddress)
         elementLink.setAttribute("target", "_blank");
 
         element.appendChild(template);

@@ -35,7 +35,7 @@ requestAnimationFrame(() => {
         boxes[activeElemI].classList.remove("active");
         boxes[lastActiveElemI].classList.add("active");
         activeElemI = lastActiveElemI;
-        document.getElementById("blockDate").innerHTML = `${eventsList[activeElemI].year} год &nbsp;&nbsp;&nbsp;&nbsp; ${eventsList[lastActiveElemI].term}`
+        document.getElementById("blockDate").innerHTML = `${eventsList[activeElemI].year} год &nbsp;&nbsp;&nbsp;&nbsp; ${eventsList[lastActiveElemI].month}`
       }
       requestAnimationFrame(onScroll);
     }

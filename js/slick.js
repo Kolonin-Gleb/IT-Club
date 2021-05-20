@@ -44,8 +44,9 @@
                 appendDots: $(element),
                 arrows: true,
                 asNavFor: null,
-                prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><</button>',
-                nextArrow: '<button class="slick-next" aria-label="Next" type="button">></button>',
+                // МЕНЯТЬ СОДЕРЖАНИЕ СТРЕЛОК
+                prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="fas fa-chevron-left"></i></button>',
+                nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="fas fa-chevron-right"></i></button>',
                 autoplay: false,
                 autoplaySpeed: 3000,
                 centerMode: false,

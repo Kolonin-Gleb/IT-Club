@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
 
 :root {
-  --border-width: 1.5px;
+  --border-width: 1px;
   --box-width: 400px;
   --sideBlock-width: calc(var(--box-width) + 2*var(--border-width));
   --blocks-width: 1700px;
@@ -152,8 +152,10 @@ body {
   color: white;
   margin: 0 auto;
   margin-bottom: 24px;
+
+  border: 0px solid #00000000;
   
-  filter: grayscale(85%)
+  filter: grayscale(85%);
 }
 
 .box > div {
@@ -193,7 +195,9 @@ body {
   filter: grayscale(0);
   border-width: var(--border-width);
   border-style: solid;
-  border-color: rgb(0, 255, 242);
+  border-color: rgb(255, 255, 255);
+  transition-property: border;
+  transition-duration: 0.5s;
 }
 
 .sup_layer > span {
@@ -475,21 +479,33 @@ textarea{
   border-bottom: 1px solid #fff;
 }
 
-button{
-  background: #fff;
+.user_submit{
+  background-color: #fff;
   font-size: 24px;
   color: rgb(0, 0, 0);
   width: auto;
-  border-radius: 8px;
+  border-radius: 10px;
+  border: none;
   padding: 12px 15px;
   align-items: center;
+}
+
+.user_submit:hover{
+  background-color: #bbbbbb;
+  transition: 0.2s;
+  transition-property: background-color;
+}
+
+.user_submit:active{
+  background-color: #a0a0a0;
+  transition: 0.2s;
+  transition-property: background-color;
 }
 
 .icons{
   display: flex;
   height: 100px;
-  margin-top: 20px;
-    margin: 0px 20px 0 20px;
+  margin: 20px 20px 0 20px;
 }
 
 .icons > div {
