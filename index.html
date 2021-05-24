@@ -6,20 +6,48 @@
     <!--SEO - Search engine optimization-->
     <meta name="description" content="Club, for collaboration and knowledge exchange in programming.">
     <meta name="keywords" content="IT, Club, IThub">
-    <meta name="autors" content="">
+    <meta name="autors" content="IT Club Team">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For mobile phones -->
-    <link rel="stylesheet" href="styles/style.css">  <!-- Connect CSS to this project -->
-
+    
     <title>IT Club</title>
-
+    
+    <link rel="stylesheet" href="styles/style.css">  <!-- Connect CSS to this project -->
+    <link rel="stylesheet" href="styles/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--use font-awesome icons-->
 </head>
 <body>
+
+  <!-- templates start -->
+
+  <template id="member_template">
+    <div class="member_card">  
+      <div class="member_face">
+        <img class="member_photo" height="260">
+        <div class="short_bio">
+          <span class="member_faculty"></span>
+          <span class="member_name"></span>
+          <span class="member_age"></span>
+        </div>
+      </div>
+      <div class="member_abstract">
+        <p class="member_desc">
+          
+        </p>
+        <div><a class="member_cv" href="#"></a></div>
+      </div>
+    </div>
+  </template>
+
+  <!-- templates end -->
+
   <div class="hello">
     <p class="titleText">
       Hello <br> World!
     </p> 
   </div>
+
   <!--1 Раздел приветствие-->
   <div class="definition">
     <div>
@@ -35,13 +63,13 @@
       </p>
     </div>
   </div>
-
-    <!--Раздел галлерея-->
+  
+  <!--2 Раздел с фотографиями-->
   <div class="events">
     <div class="blocks">
       <div id="blockDate" class="blockDate">
       </div>
-      <div id="carousel" class="carousel">
+      <div id="carouselGallery" class="carouselGallery">
         <div id="sideBlock" class="sideBlock">
         </div>
       </div>
@@ -55,7 +83,17 @@
       </div>
     </div>
   </div>
+  
+  <!--3 раздел с участниками -->
 
+  <div id="members" class="members"> <!--Это правильно, что значения id и class совпадают? - Глеб-->
+    <div id="carouselMembers" class="carouselMembers">
+      <div id="memberBlock" class="memberBlock">
+      </div>
+    </div>
+  </div>
+
+  <!--4 footer -->
   <footer>
     <div class="info">
       <p>Контакты</p>
@@ -71,21 +109,30 @@
         </div>
       </div>
     </div>
-
+    
     <div class="formWrap">
       <form>
         <input type="email" placeholder="Ваш email" required>
         <input type="text" placeholder="Ваше имя" required>
-        <textarea placeholder="Напишите о своих задачах" rows="5" cols="8"></textarea>
-        <button type="submit">Отправить запрос</button>
+        <textarea placeholder="Сообщение" rows="5" cols="8"></textarea>
+        <button type="submit" class="user_submit">Отправить запрос</button>
       </form>
     </div>
   </footer>
 
-  <script src="js/eventsMainBlock.js"></script>
-  <script src="js/eventsSideBlock.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/scroll.js"></script>
+  <script src="js/events/eventsSideBlock.js"></script>
+  <script src="js/events/eventsMainBlock.js"></script>
+  <script src="js/events/eventsController.js"></script>
+  <script src="js/events/scrollEvents.js"></script>
+
+  <script src="js/members/membersBlock.js"></script>
+  <script src="js/members/membersController.js"></script>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/slick.js"></script>
+  <script>
+    $('.memberBlock').slick();
+  </script>
 </body>
 </html>
 

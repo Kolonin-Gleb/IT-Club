@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat700:ital,wght@1,700&display=swap');
 
 :root {
-  --border-width: 1.5px;
+  --border-width: 1px;
   --box-width: 400px;
   --sideBlock-width: calc(var(--box-width) + 2*var(--border-width));
   --blocks-width: 1700px;
@@ -11,11 +10,13 @@
   --mainBlock-width: calc(var(--blocks-width) - var(--sideBlock-width) - 135px);
   --title-background: #202020;
   --content-background: #272727cc;
+  --member-card-background: url(https://klike.net/uploads/posts/2019-06/1561182942_2.jpg);
 }
 
 body {
     padding: 0;
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 .hello{
@@ -85,24 +86,24 @@ body {
 .events {
   height: 100vh;
   width: 100%;
-
+  
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #ffffff;
-
+  
   background-color: #181818;
   position: relative;
-
+  
   display: flex;
   justify-content: center;
   align-items: center;
-
+  
   box-sizing: border-box;
 }
 
 .blocks {
   height: inherit;
   width: var(--blocks-width);
-
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,13 +118,13 @@ body {
   font-size: 40px;
 }
 
-.carousel {
+.carouselGallery {
   height: 700px;
   overflow-y: scroll;
   overflow-x: visible;
 }
 
-.carousel::-webkit-scrollbar { 
+.carouselGallery::-webkit-scrollbar { 
   width: 0; 
 }
 
@@ -141,7 +142,6 @@ body {
 
 .sideBlock > .box:last-child() > div{
   cursor: default;
-  background-color: #9176DE;
 }
 
 .box{
@@ -153,7 +153,9 @@ body {
   margin: 0 auto;
   margin-bottom: 24px;
 
-  filter: grayscale(85%)
+  border: 0px solid #00000000;
+  
+  filter: grayscale(85%);
 }
 
 .box > div {
@@ -175,7 +177,7 @@ body {
   width: inherit;
   position: absolute;
   top: 0;
-
+  
   display: flex;
   align-items: flex-end;
   text-align: center;
@@ -193,13 +195,15 @@ body {
   filter: grayscale(0);
   border-width: var(--border-width);
   border-style: solid;
-  border-color: rgb(0, 255, 242);
+  border-color: rgb(255, 255, 255);
+  transition-property: border;
+  transition-duration: 0.5s;
 }
 
 .sup_layer > span {
   height: 70px;
   width: inherit;
-
+  
   background-color: var(--title-background);
   font-size: 20px;
   
@@ -223,9 +227,9 @@ body {
 #content {
   height: 100%;
   width: 100%;
-
+  
   background-color: var(--content-background);
-
+  
   transform: translateY(calc(100% - var(--title-height) - 15px));
   transition: 0.5s;
 }
@@ -234,12 +238,20 @@ body {
   transform: translateY(0);
 }
 
+#description > a {
+  color: #ffffff;
+}
+
+#description > a:focus {
+  outline: none;
+}
+
 #title {
   height: var(--title-height);
   max-width: 100%;
   padding-left: 25px;
   padding-top: 15px;
-
+  
   background-color: var(--title-background);
   font-size: 30px;
 }
@@ -253,6 +265,157 @@ body {
   overflow: auto;
 }
 
+/* ________________________ПРОЕКТЫ_______________________________ */
+
+.projects {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  
+  background-color: #181818;
+}
+
+.projectPhoto {
+  height: 100%;
+  width: 590px;
+  
+  background-color: #4e4e4e;
+}
+
+.descWrapper{
+  height: 100%;
+  width: calc(100% - 590px);
+  /* display: flex; */
+}
+
+.projectDesc {
+  height: calc(100vh - 400px);
+  width: calc(100% - 120px);
+  margin: 160px 75px 240px 45px;
+  background-color: #181818;
+  border: 1px solid #ffffff;
+}
+
+/* ________________________УЧАСТНИКИ_______________________________ */
+
+.members {
+  height: 100vh;
+  width: 100%;
+  font-size: 30px;
+  color: #fff;
+  background-image: var(--member-card-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carouselMembers {
+  height: calc(100vh - 300px);
+  width: calc(100% - 300px);
+}
+
+.memberBlock {
+  position: relative;
+  height: inherit;
+  width: auto;
+  display: flex;
+  height: 650px;
+}
+
+.memberBlock > button.slick-arrow {
+  position: absolute;
+  z-index: 100;
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+  border-radius: 50px;
+  top: calc(50% - 20px);
+}
+
+.memberBlock > button.slick-arrow:focus {
+  outline: none;
+}
+
+.memberBlock > button.slick-prev {
+  left: 0;
+  transform: translateX(calc(-100% - 30px));
+}
+
+.memberBlock > button.slick-next {
+  right: 0;
+  transform: translateX(calc(100% + 30px));
+}
+
+.memberBox {
+  overflow: auto;
+  height: 650px;
+  width: 100%;
+  background-color: #181818;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.member_card {
+  height: calc(100% - 135px);
+  max-height: 100%;
+  margin: 65px 70px 70px 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.member_face {
+  display: flex;
+  justify-content: space-between;
+  height: 50%;
+}
+
+.member_photo {
+  height: 100%;
+  width: auto;
+  margin-left: 70px;
+}
+
+.short_bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.short_bio > span:nth-child(2) {
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+.short_bio > span:nth-child(3) {
+  margin-top: 20px;
+}
+
+.member_abstract {
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.member_desc {
+  width: 80%;
+  font-size: 40px;
+}
+
+.member_cv {
+  color: #fff;
+  
+}
+
+.member_abstract > div {
+  height: 100%;
+  width: 200px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
 /* __________________________________FOOTER____________________________________*/
 footer{
@@ -316,21 +479,33 @@ textarea{
   border-bottom: 1px solid #fff;
 }
 
-button{
-  background: #fff;
+.user_submit{
+  background-color: #fff;
   font-size: 24px;
   color: rgb(0, 0, 0);
   width: auto;
-  border-radius: 8px;
+  border-radius: 10px;
+  border: none;
   padding: 12px 15px;
   align-items: center;
+}
+
+.user_submit:hover{
+  background-color: #bbbbbb;
+  transition: 0.2s;
+  transition-property: background-color;
+}
+
+.user_submit:active{
+  background-color: #a0a0a0;
+  transition: 0.2s;
+  transition-property: background-color;
 }
 
 .icons{
   display: flex;
   height: 100px;
-  margin-top: 20px;
-    margin: 0px 20px 0 20px;
+  margin: 20px 20px 0 20px;
 }
 
 .icons > div {

@@ -1,6 +1,6 @@
 requestAnimationFrame(() => {
     const boxes = document.querySelectorAll(".box");
-    let carousel = document.getElementById("carousel")
+    let carousel = document.getElementById("carouselGallery")
 
     function getIntersectionRatio(i) {
       const a = [carousel.scrollTop, carousel.scrollTop + carousel.clientHeight]; 
@@ -35,7 +35,7 @@ requestAnimationFrame(() => {
         boxes[activeElemI].classList.remove("active");
         boxes[lastActiveElemI].classList.add("active");
         activeElemI = lastActiveElemI;
-        document.getElementById("blockDate").innerHTML = `${eventsList[activeElemI].year} год &nbsp;&nbsp;&nbsp;&nbsp; ${eventsList[lastActiveElemI].semester}`
+        document.getElementById("blockDate").innerHTML = `${eventsList[activeElemI].year} год &nbsp;&nbsp;&nbsp;&nbsp; ${eventsList[lastActiveElemI].month}`
       }
       requestAnimationFrame(onScroll);
     }
