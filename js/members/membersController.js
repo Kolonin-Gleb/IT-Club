@@ -30,7 +30,7 @@ membersList.push(
         age: "16", 
         faculty: "Программист", 
         photo: "images/gallery_of_members/Alice.jpg",
-        abstract: "",
+        abstract: "Программист",
         cvLink: "Посмотреть резюме",
         cvLinkAddress: "#",
         daddy: memberBlock
@@ -40,8 +40,8 @@ membersList.push(
         name: "София Кучмар", 
         age: "17", 
         faculty: "Программист", 
-        photo: "",
-        abstract: "",
+        photo: "images/gallery_of_members/Sofia.jpg",
+        abstract: "Программист",
         cvLink: "Посмотреть резюме",
         cvLinkAddress: "#",
         daddy: memberBlock
@@ -52,7 +52,7 @@ membersList.push(
         age: "16", 
         faculty: "Программист", 
         photo: "images/gallery_of_members/Igor.jpg",
-        abstract: "",
+        abstract: "Программист Python, Dart/Flutter, HTML CSS. Базовое знание C, C++, C#, Pascal, Bash, Java.",
         cvLink: "Посмотреть резюме",
         cvLinkAddress: "#",
         daddy: memberBlock
@@ -63,7 +63,7 @@ membersList.push(
         age: "16", 
         faculty: "Программист, Веб-разработчик", 
         photo: "images/gallery_of_members/Alexander.jpg",
-        abstract: "",
+        abstract: "HTML-программист",
         cvLink: "Посмотреть резюме",
         cvLinkAddress: "https://collegemirbis-my.sharepoint.com/:w:/g/personal/kolonings20_st_ithub_ru/EVGkwElDS9FGgoE-4KYBJT8BKp18-jagPsnSVu-D88yp1w?e=gTuH2y",
         daddy: memberBlock
@@ -72,9 +72,9 @@ membersList.push(
     new Member({
         name: "Николай Квашнин", 
         age: "19", 
-        faculty: "Программист", 
+        faculty: "Программист python/js. Имею наыкимоделирвания в SOLIDWORKS. Есть опыт работы с фрезерным и лазеным станками,а также с 3D и 2D принтерами.", 
         photo: "images/gallery_of_members/",
-        abstract: "",
+        abstract: "Программист",
         cvLink: "Посмотреть резюме",
         cvLinkAddress: "https://collegemirbis-my.sharepoint.com/:w:/g/personal/kolonings20_st_ithub_ru/EYmj_RrgxlhDg0m4drMpjPEBMYcjG4AaWVdvZgV2GMisoA?e=yjdn58",
         daddy: memberBlock
@@ -86,6 +86,17 @@ membersList.push(
         faculty: "Программист", 
         photo: "images/gallery_of_members/Melanie.jpg",
         abstract: "Программирую на Python, начала изучать C++. Владею математическим *как и английским* языком на уровне B2",
+        cvLink: "Посмотреть резюме",
+        cvLinkAddress: "#",
+        daddy: memberBlock
+    }),
+
+    new Member({
+        name: "Ален Асатрян", 
+        age: "16", 
+        faculty: "Программист", 
+        photo: "images/gallery_of_members/Alen.jpg",
+        abstract: "Программист",
         cvLink: "Посмотреть резюме",
         cvLinkAddress: "#",
         daddy: memberBlock
