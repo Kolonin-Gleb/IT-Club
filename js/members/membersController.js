@@ -32,7 +32,7 @@ membersList.push(
         photo: "images/gallery_of_members/Alice.jpg",
         abstract: "Программист",
         cvLink: "Посмотреть резюме",
-        cvLinkAddress: "#",
+        cvLinkAddress: "https://collegemirbis-my.sharepoint.com/:b:/g/personal/kolonings20_st_ithub_ru/ES5LQLDbTiNCgDZOgmSuuEoBWLeF_Al9sZGbL0HNVIaNPA?e=p7PSKP",
         daddy: memberBlock
     }),
 
@@ -72,9 +72,9 @@ membersList.push(
     new Member({
         name: "Николай Квашнин", 
         age: "19", 
-        faculty: "Программист python/js. Имею наыкимоделирвания в SOLIDWORKS. Есть опыт работы с фрезерным и лазеным станками,а также с 3D и 2D принтерами.", 
-        photo: "images/gallery_of_members/",
-        abstract: "Программист",
+        faculty: "Программист", 
+        photo: "images/gallery_of_members/Anonymous.png",
+        abstract: "Программист python/js. Имею наыкимоделирвания в SOLIDWORKS. Есть опыт работы с фрезерным и лазеным станками,а также с 3D и 2D принтерами.",
         cvLink: "Посмотреть резюме",
         cvLinkAddress: "https://collegemirbis-my.sharepoint.com/:w:/g/personal/kolonings20_st_ithub_ru/EYmj_RrgxlhDg0m4drMpjPEBMYcjG4AaWVdvZgV2GMisoA?e=yjdn58",
         daddy: memberBlock
@@ -87,7 +87,7 @@ membersList.push(
         photo: "images/gallery_of_members/Melanie.jpg",
         abstract: "Программирую на Python, начала изучать C++. Владею математическим *как и английским* языком на уровне B2",
         cvLink: "Посмотреть резюме",
-        cvLinkAddress: "#",
+        cvLinkAddress: "https://collegemirbis-my.sharepoint.com/:b:/g/personal/kolonings20_st_ithub_ru/EQ7a8_Vz7uRJsJsU95KRe_QBJfcz8alRZAJN-fHX-kMxoQ?e=uo54Bl",
         daddy: memberBlock
     }),
 
