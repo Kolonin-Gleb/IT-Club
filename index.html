@@ -6,7 +6,7 @@
     <!--SEO - Search engine optimization-->
     <meta name="description" content="Club, for collaboration and knowledge exchange in programming.">
     <meta name="keywords" content="IT, Club, IThub">
-    <meta name="autors" content="IT Club Team">
+    <meta name="authors" content="IT Club Team">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For mobile phones -->
     
@@ -14,6 +14,7 @@
     
     <link rel="stylesheet" href="styles/style.css">  <!-- Connect CSS to this project -->
     <link rel="stylesheet" href="styles/slick.css">
+    <link rel="stylesheet" href="styles/slick-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--use font-awesome icons-->
 </head>
@@ -50,10 +51,7 @@
 
   <!--1 Раздел приветствие-->
   <div class="definition">
-    <div>
-      <p class="we">
-        <img src="./images/Greeting.jpg" alt="Приветствуем!" width="1606" height="362">
-      </p>
+    <div class="intro" id="intro">
     </div>
     <div class = "definitiontext">
       <p class="ITCLubTitle">IT Club - </p>
@@ -64,7 +62,7 @@
     </div>
   </div>
   
-  <!--2 Раздел с фотографиями-->
+  <!--2 Раздел с мероприятиями-->
   <div class="events">
     <div class="blocks">
       <div id="blockDate" class="blockDate">
@@ -103,10 +101,10 @@
       </div>
       <div>
         <p>В соц.сетях - много полезного для студентов и участников клуба. <br>Подписывайтесь: Вконтакте и Instagram!</p>
-        <div class="icons">
-          <div></div>
-          <div></div>
-        </div>
+      </div>
+      <div class="icons">
+        <div></div>
+        <div></div>
       </div>
     </div>
     
@@ -121,17 +119,26 @@
   </footer>
 
   <script src="js/events/eventsSideBlock.js"></script>
-  <script src="js/events/eventsMainBlock.js"></script>
   <script src="js/events/eventsController.js"></script>
   <script src="js/events/scrollEvents.js"></script>
 
   <script src="js/members/membersBlock.js"></script>
   <script src="js/members/membersController.js"></script>
 
+  <script src="js/intro/introController.js"></script>
+
   <script src="js/jquery.js"></script>
   <script src="js/slick.js"></script>
   <script>
     $('.memberBlock').slick();
+  </script>
+  <script>
+    $('.intro').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000
+    });
   </script>
 </body>
 </html>

@@ -247,7 +247,7 @@ body {
 }
 
 #title {
-  height: var(--title-height);
+  min-height: var(--title-height);
   max-width: 100%;
   padding-left: 25px;
   padding-top: 15px;
@@ -263,37 +263,6 @@ body {
   font-size: 22px;
   max-height: 520px;
   overflow: auto;
-}
-
-/* ________________________ПРОЕКТЫ_______________________________ */
-
-.projects {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  
-  background-color: #181818;
-}
-
-.projectPhoto {
-  height: 100%;
-  width: 590px;
-  
-  background-color: #4e4e4e;
-}
-
-.descWrapper{
-  height: 100%;
-  width: calc(100% - 590px);
-  /* display: flex; */
-}
-
-.projectDesc {
-  height: calc(100vh - 400px);
-  width: calc(100% - 120px);
-  margin: 160px 75px 240px 45px;
-  background-color: #181818;
-  border: 1px solid #ffffff;
 }
 
 /* ________________________УЧАСТНИКИ_______________________________ */
@@ -439,11 +408,25 @@ footer > .info {
   flex-direction: column;
   justify-content: space-between;
   max-height: 100%;
-  padding: 140px 0;
+  padding: 170px 0;
 }
 
 footer > .info p {
   margin: 0;
+}
+
+.icons{
+  display: flex;
+  height: 100px;
+  margin: 20px 20px 0 20px;
+}
+
+.icons > div {
+  width: 100px;
+  height: 100%;
+  background-color: blueviolet;
+  border-radius: 100%;
+  margin-right: 30px;
 }
 
 .formWrap {
@@ -502,16 +485,3 @@ textarea{
   transition-property: background-color;
 }
 
-.icons{
-  display: flex;
-  height: 100px;
-  margin: 20px 20px 0 20px;
-}
-
-.icons > div {
-  width: 100px;
-  height: 100%;
-  background-color: blueviolet;
-  border-radius: 100%;
-  margin-right: 15px;
-}
