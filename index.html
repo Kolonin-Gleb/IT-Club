@@ -129,14 +129,18 @@
   <script src="js/jquery.js"></script>
   <script src="js/slick.js"></script>
   <script>
-    $('.memberBlock').slick();
+    $('.memberBlock').slick({
+      dots: true
+    });
   </script>
   <script>
     $('.intro').slick({
       slidesToShow: 8 ,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 2000
+      autoplaySpeed: 2000,
+      pauseOnFocus: false,
+      pauseOnHover: false
     });
   </script>
 </body>
