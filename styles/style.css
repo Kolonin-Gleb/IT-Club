@@ -29,15 +29,15 @@ body {
   justify-content: center;
 }
 
- .titleText {
+.titleText {
   font-size: 200px;
   text-align: center;
   
- text-transform: uppercase;
+  text-transform: uppercase;
   background:  linear-gradient(90deg, rgba(22,163,226,1) 0%, rgba(152,34,255,1) 100%);
   
       
- font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -45,14 +45,53 @@ body {
   margin: 0;
   
 }
- .definition{
+
+.intro {
+  height: 300px;
+  width: calc(100% - 250px);
+  margin: 0px 125px;
+  padding: 50px 50px 0px 50px;
+  position: relative;
+}
+
+.slick-list {
+  width: calc(100% - 60px);
+}
+
+.intro > button.slick-arrow {
+  position: absolute;
+  height: inherit;
+  width: 50px;
+  border: none;
+  background-color: #d8d8d89d;
+  transition: 0.1s;
+}
+
+.intro > button.slick-arrow:hover {
+  background-color: #b3b3b39d;
+}
+
+.intro > button.slick-arrow:active {
+  background-color: #9e9e9e9d;
+}
+
+.intro > button.slick-prev {
+  left: 0;
+}
+
+.intro > button.slick-next {
+  right: 0;
+  transform: translateY(calc(-100% - 4px));
+}
+
+.definition{
   height: 100vh;
   background-color: #9176DE;
   color: white;
 } 
 
 .definitiontext{
-  height: calc(100vh - 368px);
+  height: calc(100vh - 400px);
   display: flex;
   flex-direction: column;
   justify-content: center;
