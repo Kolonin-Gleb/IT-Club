@@ -41,7 +41,7 @@ membersList.push(
         age: "17", 
         faculty: "Программист", 
         photo: "images/gallery_of_members/Sofia.jpg",
-        abstract: "Программист",
+        abstract: "Программист на Python. Есть опыт в управлении командой и организации  мероприятий. Люблю статистику и планирование!",
         cvLink: "Посмотреть резюме",
         cvLinkAddress: "https://collegemirbis-my.sharepoint.com/:b:/g/personal/kolonings20_st_ithub_ru/ETYEhPnDuhlBuLP-tPBFybMBvodnklztmWsgPtNdQ5z6Nw?e=EYYPcb",
         daddy: memberBlock
@@ -74,7 +74,7 @@ membersList.push(
         age: "19", 
         faculty: "Программист", 
         photo: "images/gallery_of_members/Nikolay.jpg",
-        abstract: "Программист python/js. Имею наыкимоделирвания в SOLIDWORKS. Есть опыт работы с фрезерным и лазеным станками,а также с 3D и 2D принтерами.",
+        abstract: "Программист python/js. Имею навыки моделирвания в SOLIDWORKS. Есть опыт работы с фрезерным и лазеным станками, а также с 3D и 2D принтерами.",
         cvLink: "Посмотреть резюме",
         cvLinkAddress: "https://collegemirbis-my.sharepoint.com/:w:/g/personal/kolonings20_st_ithub_ru/EYmj_RrgxlhDg0m4drMpjPEBMYcjG4AaWVdvZgV2GMisoA?e=yjdn58",
         daddy: memberBlock
