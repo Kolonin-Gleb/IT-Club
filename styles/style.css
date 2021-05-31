@@ -47,11 +47,13 @@ body {
 }
 
 .intro {
-  height: 300px;
+  height: auto;
   width: calc(100% - 250px);
   margin: 0px 125px;
   padding: 50px 50px 0px 50px;
   position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 
 .slick-list {
@@ -60,11 +62,15 @@ body {
 
 .intro > button.slick-arrow {
   position: absolute;
-  height: inherit;
+  height: 300px;
   width: 50px;
   border: none;
   background-color: #d8d8d89d;
   transition: 0.1s;
+}
+
+.slick-track > .slick-slide > div {
+  display: flex;
 }
 
 .intro > button.slick-arrow:hover {
@@ -81,7 +87,7 @@ body {
 
 .intro > button.slick-next {
   right: 0;
-  transform: translateY(calc(-100% - 4px));
+  transform: translateY(calc(-100%));
 }
 
 .definition{
