@@ -29,15 +29,15 @@ body {
   justify-content: center;
 }
 
- .titleText {
+.titleText {
   font-size: 200px;
   text-align: center;
   
- text-transform: uppercase;
+  text-transform: uppercase;
   background:  linear-gradient(90deg, rgba(22,163,226,1) 0%, rgba(152,34,255,1) 100%);
   
       
- font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -45,14 +45,53 @@ body {
   margin: 0;
   
 }
- .definition{
+
+.intro {
+  height: 300px;
+  width: calc(100% - 250px);
+  margin: 0px 125px;
+  padding: 50px 50px 0px 50px;
+  position: relative;
+}
+
+.slick-list {
+  width: calc(100% - 60px);
+}
+
+.intro > button.slick-arrow {
+  position: absolute;
+  height: inherit;
+  width: 50px;
+  border: none;
+  background-color: #d8d8d89d;
+  transition: 0.1s;
+}
+
+.intro > button.slick-arrow:hover {
+  background-color: #b3b3b39d;
+}
+
+.intro > button.slick-arrow:active {
+  background-color: #9e9e9e9d;
+}
+
+.intro > button.slick-prev {
+  left: 0;
+}
+
+.intro > button.slick-next {
+  right: 0;
+  transform: translateY(calc(-100% - 4px));
+}
+
+.definition{
   height: 100vh;
   background-color: #9176DE;
   color: white;
 } 
 
 .definitiontext{
-  height: calc(100vh - 368px);
+  height: calc(100vh - 400px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -247,7 +286,7 @@ body {
 }
 
 #title {
-  height: var(--title-height);
+  min-height: var(--title-height);
   max-width: 100%;
   padding-left: 25px;
   padding-top: 15px;
@@ -263,37 +302,6 @@ body {
   font-size: 22px;
   max-height: 520px;
   overflow: auto;
-}
-
-/* ________________________ПРОЕКТЫ_______________________________ */
-
-.projects {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  
-  background-color: #181818;
-}
-
-.projectPhoto {
-  height: 100%;
-  width: 590px;
-  
-  background-color: #4e4e4e;
-}
-
-.descWrapper{
-  height: 100%;
-  width: calc(100% - 590px);
-  /* display: flex; */
-}
-
-.projectDesc {
-  height: calc(100vh - 400px);
-  width: calc(100% - 120px);
-  margin: 160px 75px 240px 45px;
-  background-color: #181818;
-  border: 1px solid #ffffff;
 }
 
 /* ________________________УЧАСТНИКИ_______________________________ */
@@ -425,7 +433,7 @@ footer{
   height: 800px;
   display: flex;
   justify-content: space-evenly;
-  flex-direction: row; /* горизонтальное напровление */
+  flex-direction: row;
   font-size: 24px;
 } 
 
@@ -439,11 +447,25 @@ footer > .info {
   flex-direction: column;
   justify-content: space-between;
   max-height: 100%;
-  padding: 140px 0;
+  padding: 170px 0;
 }
 
 footer > .info p {
   margin: 0;
+}
+
+.icons{
+  display: flex;
+  height: 100px;
+  margin: 20px 20px 0 20px;
+}
+
+.icons > div {
+  width: 100px;
+  height: 100%;
+  background-color: blueviolet;
+  border-radius: 100%;
+  margin-right: 30px;
 }
 
 .formWrap {
@@ -502,16 +524,3 @@ textarea{
   transition-property: background-color;
 }
 
-.icons{
-  display: flex;
-  height: 100px;
-  margin: 20px 20px 0 20px;
-}
-
-.icons > div {
-  width: 100px;
-  height: 100%;
-  background-color: blueviolet;
-  border-radius: 100%;
-  margin-right: 15px;
-}

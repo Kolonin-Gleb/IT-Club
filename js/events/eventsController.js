@@ -21,8 +21,7 @@ eventsList.push(
         description: "", 
         daddy: sideBlock,
         year: 2020,
-        month: '1-ый семестр'
-        
+        month: "Октябрь"
     }),
 
     new EventsSideBlock({
@@ -128,7 +127,7 @@ eventsList.push(
     }),
 
     new EventsSideBlock({
-        title: "Основы финансовой грамотности и Инвестирования. Выступление Колонина Глеба",
+        title: "Основы финансовой грамотности и Инвестирования. Выступление Глеба",
         background: "url(images/gallery_of_events/2_term/8_Gleb_Investing.jpg)",
         description: `22 Апреля 2021 года. <br> Колонин Глеб выступил по теме Основы финансовой грамотности и Инвестирования. <br> Он ответил на вопросы аудитории, поделился своим опытом инвестирования и дал ресурсы дя дальнейшего изучения темы. <br> Презентацию с выступления можно найти по ссылке: <a href="https://collegemirbis-my.sharepoint.com/:f:/g/personal/kolonings20_st_ithub_ru/Ek9_k5hUipBPsN6bs3-i6B8B0L2SMJeYB5UHHC4MlT8c5g" target="_blank"> Открыть </a> <br>`,
         daddy: sideBlock,
