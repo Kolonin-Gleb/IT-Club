@@ -17,6 +17,31 @@
     <link rel="stylesheet" href="styles/slick-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--use font-awesome icons-->
+    <script src="js/jquery.js"></script>
+    <script>
+      function click_form() {
+        console.log(1)
+          // собираем данные с формы
+          var user_name    = $('#user_name').val();
+          var user_email   = $('#user_email').val();
+          var text_comment = $('#text_comment').val();
+          // отправляем данные
+          $.ajax({
+              url: "/mail.php", // куда отправляем
+              type: "post", // метод передачи
+              dataType: "json", // тип передачи данных
+              data: { // что отправляем
+                "user_name":    user_name,
+                "user_email":   user_email,
+                "text_comment": text_comment
+              },
+              // после получения ответа сервера
+              success: function(data){
+                  $('.messages').html(data.result); // выводим ответ сервера
+              }
+          })
+      }
+    </script>
 </head>
 <body>
 
@@ -377,13 +402,14 @@
           <div class="container_for_soc"><a href="#"><img src="images/1491580658-yumminkysocialmedia06_83104.png" alt="ins"></a></div>
         </div>
       </div>
-      <div class="col-lg-6 order-lg-last order-first">
+      <div class="col-lg-6 order-lg-l ast order-first">
         <div class="form">
-          <form action="index.html" class="d-flex flex-column">
-            <input class="in_text" type="email"  placeholder="Ваш email" required>
-            <input class="in_text" type="text" placeholder="Ваше имя" required>
-            <textarea  class="in_text" cols="30" rows="5" placeholder="Сообщение" required></textarea>
-            <input class="submit" value="Отправить письмо" type="submit">
+          <form class="d-flex flex-column">
+            <input class="in_text" type="email" id="user_email" placeholder="Ваш email" required>
+            <input class="in_text" type="text" id="user_name" placeholder="Ваше имя" required>
+            <textarea  class="in_text" id="text_comment" cols="30" rows="5" placeholder="Сообщение" required></textarea>
+            <input class="submit" id="bth_submit" value="Отправить письмо" type="button" onclick="click_form()">
+            <div class="messages"></div>
           </form>
         </div>
       </div>
@@ -400,7 +426,6 @@
 
   <script src="js/intro/introController.js"></script>
 
-  <script src="js/jquery.js"></script>
   <script src="js/slick.js"></script>
   <script>
     $('.memberBlock').slick({
