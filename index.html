@@ -362,48 +362,35 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="col-md-6">
-      <h1 class="h1_contact">Контакты</h1>
-      <div class="contact">
-        <p>Звоните: <a href="tel:+79164381712">+7 (916)4381712</a></p>
-        <p>Пишите: <a href="mailto:KoloninGS20@st.ithub.ru">KoloninGS20@st.ithub.ru</a></p>
-      </div>
+    <div class="row">
+      <div class="col-lg-6  order-lg-first order-last">
+        <h1 class="h1_contact">Контакты</h1>
+        <div class="contact">
+          <p>Звоните: <a href="tel:+79164381712">+7 (916)4381712</a></p>
+          <p>Пишите: <a href="mailto:KoloninGS20@st.ithub.ru">KoloninGS20@st.ithub.ru</a></p>
+        </div>
 
-      <p class="text_soc">В соц.сетях - много полезного для студентов и участников клуба.<br>
-          Подписывайтесь: Вконтакте и Instagram!</p>
-      <div class="row">
-        <div class="container_for_soc"><a href="#"><img src="images/1486147202-social-media-circled-network10_79475.png" alt="vk"></a></div>
-        <div class="container_for_soc"><a href="#"><img src="images/1491580658-yumminkysocialmedia06_83104.png" alt="ins"></a></div>
+        <p class="text_soc">В соц.сетях - много полезного для студентов и участников клуба.<br>
+            Подписывайтесь: Вконтакте и Instagram!</p>
+        <div class="row">
+          <div class="container_for_soc"><a href="#"><img src="images/1486147202-social-media-circled-network10_79475.png" alt="vk"></a></div>
+          <div class="container_for_soc"><a href="#"><img src="images/1491580658-yumminkysocialmedia06_83104.png" alt="ins"></a></div>
+        </div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="form">
-
+      <div class="col-lg-6 order-lg-last order-first">
+        <div class="form">
+          <form action="index.html" class="d-flex flex-column">
+            <input class="in_text" type="email"  placeholder="Ваш email" required>
+            <input class="in_text" type="text" placeholder="Ваше имя" required>
+            <textarea  class="in_text" cols="30" rows="5" placeholder="Сообщение" required></textarea>
+            <input class="submit" value="Отправить письмо" type="submit">
+          </form>
+        </div>
       </div>
     </div>
   </div>
 </footer>
 
-<!--2 Раздел с мероприятиями-->
-  <!-- <div class="events">
-    <section class="blocks">
-
-      <div id="blockDate" class="blockDate">
-      </div>
-        <div id="carousexlallery" class="carousexlallery">
-          <div id="sideBlock" class="sideBlock">
-          </div>
-          </div>
-          <div id="mainBlock" class="mainBlock">
-          <div id="content">
-          <div id="title">
-          </div>
-          <div id="description">
-          </div>
-        </div>
-      </div>
-    </section>
-  </div> -->
   <script src="js/events/eventsSideBlock.js"></script>
   <script src="js/events/eventsController.js"></script>
   <script src="js/events/scrollEvents.js"></script>
@@ -420,7 +407,7 @@
       dots: false,
       adaptiveHeight: true,
     })
-    .hover(()=>{$('.slick-prev').css("opacity", "1");$(".slick-next").css("opacity", "1")},()=>{$('.slick-prev').css("opacity", "0");$(".slick-next").css("opacity", "0")})
+    // .hover(()=>{$('.slick-prev').css("opacity", "1");$(".slick-next").css("opacity", "1")},()=>{$('.slick-prev').css("opacity", "0");$(".slick-next").css("opacity", "0")})
 
     $('.intro').slick({
       slidesToShow: 8 ,
