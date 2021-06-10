@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
 
     <!--SEO - Search engine optimization-->
     <meta name="description" content="Club, for collaboration and knowledge exchange in programming.">
@@ -14,115 +14,402 @@
     
     <link rel="stylesheet" href="styles/style.css">  <!-- Connect CSS to this project -->
     <link rel="stylesheet" href="styles/slick.css">
+    <link rel="stylesheet" href="styles/slick-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--use font-awesome icons-->
 </head>
 <body>
 
-  <!-- templates start -->
+<!-- Начальный экран -->
 
-  <template id="member_template">
-    <div class="member_card">  
-      <div class="member_face">
-        <img class="member_photo" height="260">
-        <div class="short_bio">
-          <span class="member_faculty"></span>
-          <span class="member_name"></span>
-          <span class="member_age"></span>
-        </div>
-      </div>
-      <div class="member_abstract">
-        <p class="member_desc">
-          
-        </p>
-        <div><a class="member_cv" href="#"></a></div>
-      </div>
-    </div>
-  </template>
-
-  <!-- templates end -->
-
-  <div class="hello">
-    <p class="titleText">
-      Hello <br> World!
-    </p> 
-  </div>
-
-  <!--1 Раздел приветствие-->
-  <div class="definition">
-    <div class="intro" id="intro">
-    </div>
-    <div class = "definitiontext">
-      <p class="ITCLubTitle">IT Club - </p>
-      <p class="ITCLubText">
-          место, где дважды в неделю студенты разных направлений собираются в IT Club для обмена знаниями,
-          приятными эмоциями и создания совместных проектов:)
-      </p>
+<section class="hello d-flex justify-content-center align-items-center">
+  <div class="container">
+    <div class="hello_div">
+      <h1 class="hello_div_h1 text-center">
+        HELLO<br>WORLD !
+      </h1>
     </div>
   </div>
-  
-  <!--2 Раздел с мероприятиями-->
-  <div class="events">
-    <div class="blocks">
+</section>
+
+<!-- Раздел приветствие -->
+
+<section class="HiClub">
+  <div class="container">
+
+    <div class="col-md-12">
+      <img src="./images/Greeting.jpg" alt="Приветствуем!" class="HiClub_img">
+    </div>
+
+    <div class="col-md-12">
+      <p class="HiClub_title">IT Club -</p>
+    </div>
+
+    <div class="col-md-12">
+      <p class="HiClub_text text-right">место, где дважды в неделю студенты разных направлений собираются в IT Club для обмена знаниями, приятными эмоциями и создания совместных проектов:)</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- раздел с участниками -->
+
+<section class="members d-flex justify-content-center align-items-center">
+  <div class="container-fluid">
+    <div class="memberBlock">
+      <div class="member">
+              <div class="member_padding">
+
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <div class="container_photo">
+                      <img src="images/gallery_of_members/Gleb.jpg" class="member_photo">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <p class="short_bio text-right">
+                      <span class="member_faculty">Програмист</span><br>
+                      <span class="member_name">Глеб Колонин</span><br>
+                      <span class="member_age">16</span>
+                    </p>
+                  </div>
+
+                </div>
+
+                <div class="row">
+
+                  <div class="col-xl-10 col-lg-12">
+                    <p class="member_desc">Программирую на С++. Есть личные проекты на github.</p>
+                  </div>
+
+                  <div class="col-xl-2 col-lg-12 text-right">
+                    <a class="member_cv" href="https://collegemirbis-my.sharepoint.com/:b:/g/personal/kolonings20_st_ithub_ru/EQd4OXF3sx5OuM-yZiBM8kcBNVxw2Yro9JSBxWW6jGvCEw?e=JkRuhQ" target="_blank" tabindex="0">Посмотреть резюме</a>
+                  </div>
+                </div>
+              </div>
+      </div>
+      <div class="member">
+              <div class="member_padding">
+
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <div class="container_photo">
+                      <img src="images/gallery_of_members/Marat.jpg" class="member_photo">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <p class="short_bio text-right">
+                      <span class="member_faculty">Програмист</span><br>
+                      <span class="member_name">Марат Геворкян</span><br>
+                      <span class="member_age">17</span>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="row">
+
+                  <div class="col-xl-10 col-lg-12">
+                    <p class="member_desc">Свободно говорю на C#. Лично знаком с асинхронностью и абстракциями ;)</p>
+                  </div>
+
+                  <div class="col-xl-2 col-lg-12 text-right">
+                    <a class="member_cv" href="https://collegemirbis-my.sharepoint.com/:w:/g/personal/kolonings20_st_ithub_ru/EWBpbCk4ZFRKha4Xaph7O34BLj2rVNLHCsEWMuW0-0d5kQ?e=ReT7DI" target="_blank" tabindex="0">Посмотреть резюме</a>
+                  </div>
+                </div>
+              </div>
+      </div>
+      <div class="member">
+              <div class="member_padding">
+
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <div class="container_photo">
+                    <img src="images/gallery_of_members/Alice.jpg" class="member_photo" style="margin-top: -132px;">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <p class="short_bio text-right">
+                      <span class="member_faculty">Програмист</span><br>
+                      <span class="member_name">Алиса Матросова</span><br>
+                      <span class="member_age">16</span>
+                    </p>
+                  </div>
+
+                </div>
+
+                <div class="row">
+
+                  <div class="col-xl-10 col-lg-12">
+                    <p class="member_desc">Програмист</p>
+                  </div>
+
+                  <div class="col-xl-2 col-lg-12 text-right">
+                    <a class="member_cv" href="https://collegemirbis-my.sharepoint.com/:b:/g/personal/kolonings20_st_ithub_ru/ES5LQLDbTiNCgDZOgmSuuEoBWLeF_Al9sZGbL0HNVIaNPA?e=p7PSKP" target="_blank" tabindex="0">Посмотреть резюме</a>
+                  </div>
+                </div>
+              </div>
+      </div>
+      <div class="member">
+              <div class="member_padding">
+
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <div class="container_photo">
+                    <img src="images/gallery_of_members/Sofia.jpg" class="member_photo">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <p class="short_bio text-right">
+                      <span class="member_faculty">Програмист</span><br>
+                      <span class="member_name">София Кучмар</span><br>
+                      <span class="member_age">17</span>
+                    </p>
+                  </div>
+
+                </div>
+
+                <div class="row">
+
+                  <div class="col-xl-10 col-lg-12">
+                    <p class="member_desc">Програмист</p>
+                  </div>
+
+                  <div class="col-xl-2 col-lg-12 text-right">
+                    <a class="member_cv" href="#" target="_blank" tabindex="0">Посмотреть резюме</a>
+                  </div>
+                </div>
+              </div>
+      </div>
+      <div class="member">
+              <div class="member_padding">
+
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <div class="container_photo">
+                    <img src="images/gallery_of_members/Igor.jpg" class="member_photo">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <p class="short_bio text-right">
+                      <span class="member_faculty">Програмист</span><br>
+                      <span class="member_name">Игорь Молчанов</span><br>
+                      <span class="member_age">16</span>
+                    </p>
+                  </div>
+
+                </div>
+
+                <div class="row">
+
+                  <div class="col-xl-10 col-lg-12">
+                    <p class="member_desc">Программист Python, Dart/Flutter, HTML CSS. Базовое знание C, C++, C#, Pascal, Bash, Java.</p>
+                  </div>
+
+                  <div class="col-xl-2 col-lg-12 text-right">
+                    <a class="member_cv" href="#" target="_blank" tabindex="0">Посмотреть резюме</a>
+                  </div>
+                </div>
+              </div>
+      </div>
+      <div class="member">
+              <div class="member_padding">
+
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <div class="container_photo">
+                    <img src="images/gallery_of_members/Alexander.jpg" class="member_photo">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <p class="short_bio text-right">
+                      <span class="member_faculty">Программист, Веб-разработчик</span><br>
+                      <span class="member_name">Александр Степанов</span><br>
+                      <span class="member_age">16</span>
+                    </p>
+                  </div>
+
+                </div>
+
+                <div class="row">
+
+                  <div class="col-xl-10 col-lg-12">
+                    <p class="member_desc">HTML-программист</p>
+                  </div>
+
+                  <div class="col-xl-2 col-lg-12 text-right">
+                    <a class="member_cv" href="https://collegemirbis-my.sharepoint.com/:w:/g/personal/kolonings20_st_ithub_ru/EVGkwElDS9FGgoE-4KYBJT8BKp18-jagPsnSVu-D88yp1w?e=gTuH2y" target="_blank" tabindex="0">Посмотреть резюме</a>
+                  </div>
+                </div>
+              </div>
+      </div>
+      <div class="member">
+              <div class="member_padding">
+
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <div class="container_photo">
+                    <img src="images/gallery_of_members/Anonymous.png" class="member_photo">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <p class="short_bio text-right">
+                      <span class="member_faculty">Программист</span><br>
+                      <span class="member_name">Николай Квашнин</span><br>
+                      <span class="member_age">19</span>
+                    </p>
+                  </div>
+
+                </div>
+
+                <div class="row">
+
+                  <div class="col-xl-10 col-lg-12">
+                    <p class="member_desc">Программист python/js. Имею наыкимоделирвания в SOLIDWORKS. Есть опыт работы с фрезерным и лазеным станками,а также с 3D и 2D принтерами.</p>
+                  </div>
+
+                  <div class="col-xl-2 col-lg-12 text-right">
+                    <a class="member_cv" href="https://collegemirbis-my.sharepoint.com/:w:/g/personal/kolonings20_st_ithub_ru/EYmj_RrgxlhDg0m4drMpjPEBMYcjG4AaWVdvZgV2GMisoA?e=yjdn58" target="_blank" tabindex="0">Посмотреть резюме</a>
+                  </div>
+                </div>
+              </div>
+      </div>
+      <div class="member">
+              <div class="member_padding">
+
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <div class="container_photo">
+                    <img src="images/gallery_of_members/Melanie.jpg" class="member_photo">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <p class="short_bio text-right">
+                      <span class="member_faculty">Программист</span><br>
+                      <span class="member_name">Мелания Манойлович</span><br>
+                      <span class="member_age">16</span>
+                    </p>
+                  </div>
+
+                </div>
+
+                <div class="row">
+
+                  <div class="col-xl-10 col-lg-12">
+                    <p class="member_desc">Программирую на Python, начала изучать C++. Владею математическим *как и английским* языком на уровне B2</p>
+                  </div>
+
+                  <div class="col-xl-2 col-lg-12 text-right">
+                    <a class="member_cv" href="https://collegemirbis-my.sharepoint.com/:b:/g/personal/kolonings20_st_ithub_ru/EQ7a8_Vz7uRJsJsU95KRe_QBJfcz8alRZAJN-fHX-kMxoQ?e=uo54Bl" target="_blank" tabindex="0">Посмотреть резюме</a>
+                  </div>
+                </div>
+              </div>
+      </div>
+      <div class="member">
+              <div class="member_padding">
+
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <div class="container_photo">
+                      <img src="images/gallery_of_members/Alen.jpg" class="member_photo" style="margin-top: -50px;">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <p class="short_bio text-right">
+                      <span class="member_faculty">Программист</span><br>
+                      <span class="member_name">Ален Асатрян</span><br>
+                      <span class="member_age">16</span>
+                    </p>
+                  </div>
+
+                </div>
+
+                <div class="row">
+
+                  <div class="col-xl-10 col-lg-12">
+                    <p class="member_desc">Программист</p>
+                  </div>
+
+                  <div class="col-xl-2 col-lg-12 text-right">
+                    <a class="member_cv" href="#" target="_blank" tabindex="0">Посмотреть резюме</a>
+                  </div>
+                </div>
+              </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Подвал сайта -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="col-md-6">
+      <h1 class="h1_contact">Контакты</h1>
+      <div class="contact">
+        <p>Звоните: <a href="tel:+79164381712">+7 (916)4381712</a></p>
+        <p>Пишите: <a href="mailto:KoloninGS20@st.ithub.ru">KoloninGS20@st.ithub.ru</a></p>
+      </div>
+
+      <p class="text_soc">В соц.сетях - много полезного для студентов и участников клуба.<br>
+          Подписывайтесь: Вконтакте и Instagram!</p>
+      <div class="row">
+        <div class="container_for_soc"><a href="#"><img src="images/1486147202-social-media-circled-network10_79475.png" alt="vk"></a></div>
+        <div class="container_for_soc"><a href="#"><img src="images/1491580658-yumminkysocialmedia06_83104.png" alt="ins"></a></div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form">
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!--2 Раздел с мероприятиями-->
+  <!-- <div class="events">
+    <section class="blocks">
+
       <div id="blockDate" class="blockDate">
       </div>
-      <div id="carouselGallery" class="carouselGallery">
-        <div id="sideBlock" class="sideBlock">
-        </div>
-      </div>
-      <div id="mainBlock" class="mainBlock">
-        <div id="content">
+        <div id="carousexlallery" class="carousexlallery">
+          <div id="sideBlock" class="sideBlock">
+          </div>
+          </div>
+          <div id="mainBlock" class="mainBlock">
+          <div id="content">
           <div id="title">
           </div>
           <div id="description">
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  
-  <!--3 раздел с участниками -->
-
-  <div id="members" class="members"> <!--Это правильно, что значения id и class совпадают? - Глеб-->
-    <div id="carouselMembers" class="carouselMembers">
-      <div id="memberBlock" class="memberBlock">
-      </div>
-    </div>
-  </div>
-
-  <!--4 footer -->
-  <footer>
-    <div class="info">
-      <p>Контакты</p>
-      <div class="number">
-        <p>Звоните: +7 (916)4381712</p>
-        <p>Пишите: KoloninGS20@st.ithub.ru</p>
-      </div>
-      <div>
-        <p>В соц.сетях - много полезного для студентов и участников клуба. <br>Подписывайтесь: Вконтакте и Instagram!</p>
-      </div>
-      <div class="icons">
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-    
-    <div class="formWrap">
-      <form>
-        <input type="email" placeholder="Ваш email" required>
-        <input type="text" placeholder="Ваше имя" required>
-        <textarea placeholder="Сообщение" rows="5" cols="8"></textarea>
-        <button type="submit" class="user_submit">Отправить запрос</button>
-      </form>
-    </div>
-  </footer>
-
+    </section>
+  </div> -->
   <script src="js/events/eventsSideBlock.js"></script>
   <script src="js/events/eventsController.js"></script>
   <script src="js/events/scrollEvents.js"></script>
 
-  <script src="js/members/membersBlock.js"></script>
-  <script src="js/members/membersController.js"></script>
+  <!-- <script src="js/members/membersBlock.js"></script>
+  <script src="js/members/membersController.js"></script> -->
 
   <script src="js/intro/introController.js"></script>
 
@@ -130,19 +417,17 @@
   <script src="js/slick.js"></script>
   <script>
     $('.memberBlock').slick({
-      dots: true
-    });
-  </script>
-  <script>
+      dots: false,
+      adaptiveHeight: true,
+    })
+    .hover(()=>{$('.slick-prev').css("opacity", "1");$(".slick-next").css("opacity", "1")},()=>{$('.slick-prev').css("opacity", "0");$(".slick-next").css("opacity", "0")})
+
     $('.intro').slick({
       slidesToShow: 8 ,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 2000,
-      pauseOnFocus: false,
-      pauseOnHover: false
+      autoplaySpeed: 2000
     });
   </script>
 </body>
 </html>
-

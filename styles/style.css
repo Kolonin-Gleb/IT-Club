@@ -1,7 +1,222 @@
+@import url('../styles/bootstrap.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
 
-:root {
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+
+/* Начальный экран */
+
+.hello_div {
+    background: linear-gradient(90deg, rgba(22, 163, 226, 1) 0%, rgba(152, 34, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hello_div_h1 {
+    font-size: 12.5rem;
+    text-transform: uppercase;
+    font-family: 'Roboto',
+    sans-serif;
+}
+
+/* Раздел приветствие */
+
+.HiClub {
+  background-color: #9176DE;
+}
+.HiClub p {
+  color: white;
+}
+
+.HiClub_img {
+  width: 100%;
+  height: auto;
+}
+
+.HiClub_title {
+  font-size: 150px;
+  font-weight: 700;
+  font-family: 'Montserrat700',
+  sans-serif;
+}
+
+.HiClub_text {
+  font-size: 40px;
+  font-family: 'Montserrat',
+  sans-serif;
+}
+
+/* Участники */
+
+
+.members {
+  background-image: url('https://klike.net/uploads/posts/2019-06/1561182942_2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.remember {
+  width: 100%;
+  height: 500px;
+}
+
+.memberBlock {
+  width: 100%;
+  height: auto;
+}
+
+.member_padding {
+  padding: 5%;
+}
+
+.member {
+  max-width: 85% !important;
+  margin: auto;
+  display: block !important;
+  background-color: #181818;
+}
+
+.container_photo {
+  width: 257.5px;
+  height: 257.5px;
+  overflow: hidden;
+  border-radius: 200px;
+  margin: 0 0 10% 10%;
+}
+
+.member_photo {
+  width: 100%;
+  height: auto;
+}
+
+.short_bio,
+.member_desc,
+.member_cv,
+.member_cv:hover {
+  color: white;
+}
+
+.member_cv {
+  text-decoration: underline;
+}
+
+.member_name {
+  font-size: 50px;
+}
+
+.member_faculty, .member_age, .member_cv {
+  font-size: 30px;
+}
+
+.member_desc {
+  font-size: 40px;
+}
+
+.slick-next, .slick-prev {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 7%;
+  z-index: 999;
+  background-color: rgb(0 0 0 / 66%);
+  border: none;
+}
+.slick-next{
+  right: 0;
+}
+
+.fas {
+  color: white;
+  font-size: xx-large;
+}
+
+
+/* подвал сайта */
+
+.footer {
+  width: 100%;
+  height: auto;
+  padding: 5% 0;
+  background-color: black;
+}
+
+.contact,
+.text_soc,
+.h1_contact,
+.contact a {
+  color: white;
+  margin-bottom: 10%;
+}
+
+.h1_contact {
+  font-size: 90px;
+  font-weight: bold;
+}
+.contact,
+.text_soc {
+  font-size: 24px;
+}
+
+.container_for_soc {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50px;
+  margin: 5%;
+}
+
+.container_for_soc img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .hello_div_h1 {
+    font-size: 9rem;
+  }
+
+  .HiClub_title {
+    font-size: 75px;
+  }
+
+  .slick-next,
+  .slick-prev {
+    display: none;
+  }
+
+  .member_name {
+    font-size: 40px;
+  }
+
+  .member_desc {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hello_div_h1 {
+    font-size: 5rem;
+  }
+
+  .HiClub_text {
+    font-size: 25px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* :root {
   --border-width: 1px;
   --box-width: 400px;
   --sideBlock-width: calc(var(--box-width) + 2*var(--border-width));
@@ -11,125 +226,10 @@
   --title-background: #202020;
   --content-background: #272727cc;
   --member-card-background: url(https://klike.net/uploads/posts/2019-06/1561182942_2.jpg);
-}
-
-body {
-    padding: 0;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.hello{
-  font-size: 24px;
-  background-color: white;
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.titleText {
-  font-size: 200px;
-  text-align: center;
-  
-  text-transform: uppercase;
-  background:  linear-gradient(90deg, rgba(22,163,226,1) 0%, rgba(152,34,255,1) 100%);
-  
-      
-  font-family: 'Roboto', sans-serif;
-  
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  margin: 0;
-  
-}
-
-.intro {
-  height: auto;
-  width: calc(100% - 250px);
-  margin: 0px 125px;
-  padding: 50px 50px 0px 50px;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-}
-
-.slick-list {
-  width: 100%;
-  margin: auto !important;
-}
-
-.intro > button.slick-arrow {
-  position: absolute;
-  height: 400px;
-  width: 50px;
-  border: none;
-  background-color: #d8d8d89d;
-  transition: 0.1s;
-  color: #ffffff;
-}
-
-.slick-track > .slick-slide > div {
-  display: flex;
-}
-
-.intro > button.slick-arrow:hover {
-  background-color: #b3b3b39d;
-}
-
-.intro > button.slick-arrow:active {
-  background-color: #9e9e9e9d;
-}
-
-.intro > button.slick-prev {
-  left: 0;
-}
-
-.intro > button.slick-next {
-  right: 0;
-  transform: translateY(calc(-100%));
-}
-
-.definition{
-  height: 100vh;
-  background-color: #9176DE;
-  color: white;
-} 
-
-.definitiontext{
-  height: calc(100vh - 400px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transform: translate(0, -20px);
-} 
-
-.we {
-  text-align: center;
-  margin: 0px 20px 0 20px;
-}
-
-.ITCLubTitle {
-  font-size: 150px;
-  padding-left: 260px;
-  font-family: 'Montserrat700', sans-serif;
-  font-style: bold;
-  font-weight: 700;
-  margin: 0;
-} 
-
- p.ITCLubText {
-  font-size: 40px;
-  padding: 0 100px 0 660px;
-  font-family: 'Montserrat', sans-serif;
-  margin: 0px;
-}
-
+} */
 
 /* ________________________ГАЛЕРЕЯ_______________________________ */
-
+/* 
 .events {
   height: 100vh;
   width: 100%;
@@ -149,10 +249,9 @@ body {
 
 .blocks {
   height: inherit;
-  width: var(--blocks-width);
-  
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   position: relative;
 }
@@ -259,13 +358,12 @@ body {
   justify-content: center;
 }
 
-.mainBlock{
+.mainBlock {
   height: 650px;
-  width: var(--mainBlock-width);
-  
+  width: 65%;
   background-repeat: no-repeat;
   background-size: cover;
-  
+  background-position: center;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -310,225 +408,4 @@ body {
   font-size: 22px;
   max-height: 520px;
   overflow: auto;
-}
-
-/* ________________________УЧАСТНИКИ_______________________________ */
-
-.members {
-  height: 100vh;
-  width: 100%;
-  font-size: 30px;
-  color: #fff;
-  background-image: var(--member-card-background);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.carouselMembers {
-  height: calc(100vh - 300px);
-  width: calc(100% - 300px);
-}
-
-.memberBlock {
-  position: relative;
-  height: inherit;
-  width: auto;
-  display: flex;
-  height: 650px;
-}
-
-.memberBlock > button.slick-arrow {
-  position: absolute;
-  z-index: 100;
-  height: 50px;
-  width: 50px;
-  padding: 5px;
-  border-radius: 50px;
-  top: calc(50% - 20px);
-}
-
-.memberBlock > button.slick-arrow:focus {
-  outline: none;
-}
-
-.memberBlock > button.slick-prev {
-  left: 0;
-  transform: translateX(calc(-100% - 30px));
-}
-
-.memberBlock > button.slick-next {
-  right: 0;
-  transform: translateX(calc(100% + 30px));
-}
-
-.memberBox {
-  overflow: auto;
-  height: 650px;
-  width: 100%;
-  background-color: #181818;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.member_card {
-  height: calc(100% - 135px);
-  max-height: 100%;
-  margin: 65px 70px 70px 110px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.member_face {
-  display: flex;
-  justify-content: space-between;
-  height: 50%;
-}
-
-.member_photo {
-  height: 100%;
-  width: auto;
-  margin-left: 70px;
-}
-
-.short_bio {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.short_bio > span:nth-child(2) {
-  font-size: 50px;
-  margin-top: 20px;
-}
-
-.short_bio > span:nth-child(3) {
-  margin-top: 20px;
-}
-
-.member_abstract {
-  height: 50%;
-  display: flex;
-  align-items: center;
-}
-
-.member_desc {
-  width: 80%;
-  font-size: 40px;
-}
-
-.member_cv {
-  color: #fff;
-  
-}
-
-.member_abstract > div {
-  height: 100%;
-  width: 200px;
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-/* __________________________________FOOTER____________________________________*/
-footer{
-  background-color: black;
-  color: white;
-  width: 100%;
-  height: 800px;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  font-size: 24px;
-} 
-
-footer > .info > p{
-  font-weight: bold;
-  font-size: 90px;
-}
-
-footer > .info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  max-height: 100%;
-  padding: 170px 0;
-}
-
-footer > .info p {
-  margin: 0;
-}
-
-.icons{
-  display: flex;
-  height: 100px;
-  margin: 20px 20px 0 20px;
-}
-
-.icons > div {
-  width: 100px;
-  height: 100%;
-  background-color: blueviolet;
-  border-radius: 100%;
-  margin-right: 30px;
-}
-
-.formWrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  max-height: 100%;
-  padding: 10% 0;
-}
-
-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-input{
-  background: none;
-  font-size: 24px;
-  width: 600px;
-  color: rgb(218, 218, 218);
-  border: 0 solid #fff;
-  border-bottom: 1px solid #fff;
-}
-
-textarea{
-  background: none;
-  font-size: 24px;
-  color: rgb(218, 218, 218);
-  width: 600px;
-  border: 0 solid #fff;
-  border-bottom: 1px solid #fff;
-}
-
-.user_submit{
-  background-color: #fff;
-  font-size: 24px;
-  color: rgb(0, 0, 0);
-  width: auto;
-  border-radius: 10px;
-  border: none;
-  padding: 12px 15px;
-  align-items: center;
-}
-
-.user_submit:hover{
-  background-color: #bbbbbb;
-  transition: 0.2s;
-  transition-property: background-color;
-}
-
-.user_submit:active{
-  background-color: #a0a0a0;
-  transition: 0.2s;
-  transition-property: background-color;
-}
-
+} */
