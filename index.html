@@ -46,7 +46,26 @@
     </script>
 </head>
 <body>
+  <!-- templates start -->
 
+  <template id="member_template">
+    <div class="member_card">  
+      <div class="member_face">
+        <img class="member_photo" height="260">
+        <div class="short_bio">
+          <span class="member_faculty"></span>
+          <span class="member_name"></span>
+          <span class="member_age"></span>
+        </div>
+      </div>
+      <div class="member_abstract">
+        <p class="member_desc">
+          
+        </p>
+        <div><a class="member_cv" href="#"></a></div>
+      </div>
+    </div>
+  </template>
 <!-- Начальный экран -->
 
 <section class="hello d-flex justify-content-center align-items-center">
@@ -78,6 +97,31 @@
 
   </div>
 </section>
+
+<!-- 2 Раздел с мероприятиями-->
+  <section class="events" id="events">
+    <div class="bigger">
+      <div id="blockDate" class="blockDate">
+      </div>
+        <div id="carouselGallery" class="carouselGallery">
+          <div id="sideBlock" class="sideBlock">
+          </div>
+          </div>
+          <div id="mainBlock" class="mainBlock">
+          <div id="content">
+          <div id="title">
+          </div>
+          <div id="description">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="smaller">
+      <div class="slider"></div>
+      <div class="scroll-icon"></div>
+    </div>
+  </section>
 
 <!-- раздел с участниками -->
 
@@ -423,8 +467,8 @@
   <script src="js/events/eventsController.js"></script>
   <script src="js/events/scrollEvents.js"></script>
 
-  <!-- <script src="js/members/membersBlock.js"></script>
-  <script src="js/members/membersController.js"></script> -->
+  <script src="js/members/membersBlock.js"></script>
+  <script src="js/members/membersController.js"></script>
 
   <script src="js/intro/introController.js"></script>
 
@@ -436,11 +480,21 @@
     })
     // .hover(()=>{$('.slick-prev').css("opacity", "1");$(".slick-next").css("opacity", "1")},()=>{$('.slick-prev').css("opacity", "0");$(".slick-next").css("opacity", "0")})
 
-    $('.intro').slick({
+    $(".intro").slick({
       slidesToShow: 8 ,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 2000
+    });
+
+    $("#events > .smaller > .slider").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      prevArrow: '<button type="button" class="aue"><i class="fas fa-chevron-left"></i></button>',
+      nextArrow: '<button type="button" class="auf"><i class="fas fa-chevron-right"></i></button>',
+      // autoplay: true,
+      // autoplaySpeed: 3500
     });
   </script>
 </body>
