@@ -11,7 +11,7 @@ class Member{
         let element = this.element;
         let template = document.getElementById("member_template").content.cloneNode(true);
 
-        element.classList.add("memberBox")
+        element.classList.add("member");
 
         this.name = name;
         this.age = age;

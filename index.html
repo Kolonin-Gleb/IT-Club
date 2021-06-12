@@ -8,69 +8,70 @@
     <meta name="keywords" content="IT, Club, IThub">
     <meta name="authors" content="IT Club Team">
 
-    
-    <link rel="shortcut icon" href="./images/IT Club logo.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/photo_2020-11-07_14-02-00.jpg" type="image/x-icon">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For mobile phones -->
     
     <title>IT Club</title>
     
-    <!-- Connect CSS to this project -->
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">  <!-- Connect CSS to this project -->
     <link rel="stylesheet" href="styles/slick.css">
-    <link rel="stylesheet" href="styles/slick-theme.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="Nikolay" referrerpolicy="no-referrer" />
-
-    <!-- Use font-awesome icons-->
+    <!-- <link rel="stylesheet" href="styles/slick-theme.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--use font-awesome icons-->
     <script src="js/jquery.js"></script>
     <script>
       function click_form() {
         console.log(1)
-          // Collect data from the form
+          // собираем данные с формы
           var user_name    = $('#user_name').val();
           var user_email   = $('#user_email').val();
           var text_comment = $('#text_comment').val();
-          // Send collected data
+          // отправляем данные
           $.ajax({
-              url: "/mail.php", // adress for sent data
-              type: "post", // send method
-              dataType: "json", // type of data transfer
-              data: { // What we send
+              url: "/mail.php", // куда отправляем
+              type: "post", // метод передачи
+              dataType: "json", // тип передачи данных
+              data: { // что отправляем
                 "user_name":    user_name,
                 "user_email":   user_email,
                 "text_comment": text_comment
               },
-              // When server replied
+              // после получения ответа сервера
               success: function(data){
-                  $('.messages').html(data.result); // Show server's answer
+                  $('.messages').html(data.result); // выводим ответ сервера
               }
           })
       }
     </script>
 </head>
 <body>
-  <!-- Templates start -->
+  <!-- templates start -->
 
   <template id="member_template">
-    <div class="member_card">  
-      <div class="member_face">
-        <img class="member_photo" height="260">
-        <div class="short_bio">
-          <span class="member_faculty"></span>
-          <span class="member_name"></span>
-          <span class="member_age"></span>
+    <div class="member">
+      <div class="member_padding">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="short_bio text-right">
+              <span class="member_faculty"></span>
+              <span class="member_name"></span>
+              <span class="member_age"></span>
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="member_abstract">
-        <p class="member_desc">
-          
-        </p>
-        <div><a class="member_cv" href="#"></a></div>
+        <div class="row">
+          <div class="col-xl-10 col-lg-12">
+            <p class="member_desc"></p>
+          </div>
+          <div class="col-xl-2 col-lg-12 text-right">
+            <a class="member_cv"></a>
+          </div>
+        </div>
       </div>
     </div>
   </template>
-
-<!-- Home Screen -->
+<!-- Начальный экран -->
 
 <section class="hello d-flex justify-content-center align-items-center">
   <div class="container">
@@ -82,7 +83,7 @@
   </div>
 </section>
 
-<!-- Greeting section -->
+<!-- Раздел приветствие -->
 
 <section class="HiClub">
   <div class="container">
@@ -102,7 +103,7 @@
   </div>
 </section>
 
-<!-- Events section -->
+<!-- 2 Раздел с мероприятиями-->
   <section class="events" id="events">
     <div class="bigger">
       <div id="blockDate" class="blockDate">
@@ -127,11 +128,11 @@
     </div>
   </section>
 
-<!-- Section of members -->
+<!-- раздел с участниками -->
 
 <section class="members d-flex justify-content-center align-items-center">
   <div class="container-fluid">
-    <div class="memberBlock">
+    <div id="memberBlock" class="memberBlock">
       <div class="member">
               <div class="member_padding">
 
@@ -160,11 +161,12 @@
                   </div>
 
                   <div class="col-xl-2 col-lg-12 text-right">
-                    <a class="member_cv" href="https://collegemirbis-my.sharepoint.com/:b:/g/personal/kolonings20_st_ithub_ru/EUfLSRQFkJ9LvqWVqv7p6okBjVHKPShc16huuxZozN13Zw" target="_blank" tabindex="0">Посмотреть резюме</a>
+                    <a class="member_cv" href="https://collegemirbis-my.sharepoint.com/:b:/g/personal/kolonings20_st_ithub_ru/EQd4OXF3sx5OuM-yZiBM8kcBNVxw2Yro9JSBxWW6jGvCEw?e=JkRuhQ" target="_blank" tabindex="0">Посмотреть резюме</a>
                   </div>
                 </div>
               </div>
       </div>
+      
       <div class="member">
               <div class="member_padding">
 
@@ -254,11 +256,11 @@
                 <div class="row">
 
                   <div class="col-xl-10 col-lg-12">
-                    <p class="member_desc">Программист на Python. Есть опыт в управлении командой и организации  мероприятий. Люблю статистику и планирование!</p>
+                    <p class="member_desc">Програмист</p>
                   </div>
 
                   <div class="col-xl-2 col-lg-12 text-right">
-                    <a class="member_cv" href="https://collegemirbis-my.sharepoint.com/:b:/g/personal/kolonings20_st_ithub_ru/ETYEhPnDuhlBuLP-tPBFybMBvodnklztmWsgPtNdQ5z6Nw?e=EYYPcb" target="_blank" tabindex="0">Посмотреть резюме</a>
+                    <a class="member_cv" href="#" target="_blank" tabindex="0">Посмотреть резюме</a>
                   </div>
                 </div>
               </div>
@@ -291,7 +293,7 @@
                   </div>
 
                   <div class="col-xl-2 col-lg-12 text-right">
-                    <a class="member_cv" href="#" target="_blank" tabindex="0">Посмотреть резюме (-)</a>
+                    <a class="member_cv" href="#" target="_blank" tabindex="0">Посмотреть резюме</a>
                   </div>
                 </div>
               </div>
@@ -336,7 +338,7 @@
 
                   <div class="col-md-6">
                     <div class="container_photo">
-                    <img src="images/gallery_of_members/Nikolay.jpg" class="member_photo">
+                    <img src="images/gallery_of_members/Anonymous.png" class="member_photo">
                     </div>
                   </div>
 
@@ -423,7 +425,7 @@
                   </div>
 
                   <div class="col-xl-2 col-lg-12 text-right">
-                    <a class="member_cv" href="#" target="_blank" tabindex="0">Посмотреть резюме (-)</a>
+                    <a class="member_cv" href="#" target="_blank" tabindex="0">Посмотреть резюме</a>
                   </div>
                 </div>
               </div>
@@ -433,7 +435,7 @@
 </section>
 
 
-<!-- Contacts section -->
+<!-- Подвал сайта -->
 
 <footer class="footer">
   <div class="container">
@@ -448,8 +450,8 @@
         <p class="text_soc">В соц.сетях - много полезного для студентов и участников клуба.<br>
             Подписывайтесь: Вконтакте и Instagram!</p>
         <div class="row">
-          <div class="container_for_soc"><a href="#"><img src="images/VK.png" alt="VK logo"></a></div>
-          <div class="container_for_soc"><a href="#"><img src="images/Instagram.png" alt="Instagram logo"></a></div>
+          <div class="container_for_soc"><a href="#"><img src="images/1486147202-social-media-circled-network10_79475.png" alt="vk"></a></div>
+          <div class="container_for_soc"><a href="#"><img src="images/1491580658-yumminkysocialmedia06_83104.png" alt="ins"></a></div>
         </div>
       </div>
       <div class="col-lg-6 order-lg-l ast order-first">

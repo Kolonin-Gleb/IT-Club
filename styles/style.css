@@ -5,7 +5,7 @@
 
 section {
   width: 100%;
-  height: 100vh;
+  height: 980px;
 }
 
 .container {
@@ -306,7 +306,6 @@ input.in_text{
 /* ________________________ГАЛЕРЕЯ_______________________________ */
 
 .events {
-  height: 100vh;
   width: 100%;
 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -322,7 +321,7 @@ input.in_text{
   box-sizing: border-box;
 }
 
-.events>.bigger {
+.events > .bigger {
   height: inherit;
   width: 100%;
   display: flex;
@@ -331,7 +330,7 @@ input.in_text{
   position: relative;
 }
 
-.events>.smaller {
+.events > .smaller {
   display: none;
 }
 
@@ -361,11 +360,11 @@ input.in_text{
   overflow: visible;
 }
 
-.sideBlock>*>div {
+.sideBlock > * > div {
   cursor: pointer;
 }
 
-.sideBlock>.box:last-child()>div {
+.sideBlock > .box:last-child() > div {
   cursor: default;
 }
 
@@ -383,7 +382,7 @@ input.in_text{
   filter: grayscale(85%);
 }
 
-.bigger .box>div {
+.bigger .box > div {
   position: absolute;
   top: 0;
   width: 398px;
@@ -416,7 +415,7 @@ input.in_text{
   opacity: 1.0;
 }
 
-.bigger>.active.box {
+.bigger .active.box {
   filter: grayscale(0);
   border-width: var(--border-width);
   border-style: solid;
@@ -425,7 +424,7 @@ input.in_text{
   transition-duration: 0.5s;
 }
 
-.sup_layer>span {
+.sup_layer > span {
   height: 70px;
   width: inherit;
 
@@ -475,6 +474,7 @@ input.in_text{
   max-width: 100%;
   padding-left: 25px;
   padding-top: 15px;
+  padding-bottom: 10px;
 
   background-color: var(--title-background);
   font-size: 30px;
@@ -490,33 +490,34 @@ input.in_text{
 }
 
 @media screen and (max-width: 1404px) {
-  .events>.bigger {
+  .events > .bigger {
     display: none;
   }
 
-  .events>.smaller {
+  .events > .smaller {
     display: block;
     width: 50vw;
   }
 
-  .events>.smaller>.slider {
+  .events > .smaller > .slider {
     width: 100%;
   }
 
-  .events>.smaller .box {
+  .events > .smaller .box {
     /* width: 70vw; */
     position: relative;
     height: 500px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
   }
 
-  .events>.smaller .box>div {
+  .events > .smaller .box > div {
+    width: 100%;
     position: absolute;
     bottom: 0;
-    background-color: #4f4f4f74;
-
+    background-color: #262626bb;
+    padding: 5px 15px;
   }
 
   .popup {
@@ -531,7 +532,7 @@ input.in_text{
     align-items: center;
   }
 
-  .popup>div {
+  .popup > div {
     position: relative;
     width: 80vw;
     height: 80vh;
@@ -543,7 +544,7 @@ input.in_text{
     align-items: center;
   }
 
-  .popup>div>div {
+  .popup > div > div {
     width: 90%;
     margin: 0 auto;
   }
@@ -562,7 +563,7 @@ input.in_text{
 
   .popup-desc {}
 
-  .popup>div>.cross {
+  .popup > div > .cross {
     position: absolute;
     top: 0;
     right: 0;
@@ -577,12 +578,12 @@ input.in_text{
 }
 
 .aue, .auf {
-  width: 100px;
+  width: 70px;
   position: absolute;
   top: 0;
   bottom: 0;
   margin: auto;
-  z-index: 999;
+  /* z-index: 999; */
   background-color: rgb(0 0 0 / 66%);
   border: none;
   transform: translateX(-100%);

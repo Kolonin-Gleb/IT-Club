@@ -141,18 +141,18 @@ document.getElementById("title").innerHTML = eventsList[eventsList.length - 1].t
 document.getElementById("description").innerHTML = eventsList[eventsList.length - 1].description;
 
 for (let index = 0; index < eventsList.length; index++) {
-    console.log(index);
+    // console.log(index);
     document.getElementById("sideBlock").children[index].children[0].addEventListener("click", function() {Oliver(index);});
 }
 
-for (let index = 1; index < eventsList.length; index++) {
+for (let index = eventsList.length-1; index > 0; index--) {
     let child = document.createElement("div");
     let title = document.createElement("div");
     let description = document.createElement("div");
     // let elem = document.createElement("div");
     
     child.classList = ["box"]
-    child.style.background = eventsList[index].background;
+    child.style.backgroundImage = eventsList[index].background;
     title.innerHTML = eventsList[index].title;
     child.appendChild(title);
     child.setAttribute("index", index);
@@ -175,7 +175,7 @@ for (let index = 1; index < eventsList.length; index++) {
         image.style.backgroundImage = eventsList[e.toElement.getAttribute("index")].background;
         description.innerHTML = eventsList[e.toElement.getAttribute("index")].description;
         cross.addEventListener("click", () => {
-            console.log("bbb");
+            // console.log("bbb");
             document.querySelector("#popup").remove();
         });
         popupContent.appendChild(title);
@@ -196,6 +196,6 @@ for (let index = 1; index < eventsList.length; index++) {
     // child.appendChild(image);
     // child.appendChild(description);
     
-    console.log(child);
+    // console.log(child);
     document.querySelector("#events > .smaller > .slider").appendChild(child);
 }
