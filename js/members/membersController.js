@@ -10,7 +10,7 @@ membersList.push(
         photo: "images/gallery_of_members/Gleb.jpg",
         abstract: "Программирую на С++, Python. Есть личные проекты на GitHub.",
         cvLink: "Посмотреть резюме",
-        cvLinkAddress: "https://collegemirbis-my.sharepoint.com/:b:/g/personal/kolonings20_st_ithub_ru/EQd4OXF3sx5OuM-yZiBM8kcBNVxw2Yro9JSBxWW6jGvCEw?e=JkRuhQ",
+        cvLinkAddress: "https://collegemirbis-my.sharepoint.com/:b:/g/personal/kolonings20_st_ithub_ru/EUfLSRQFkJ9LvqWVqv7p6okBjVHKPShc16huuxZozN13Zw",
         daddy: memberBlock
     }),
     
