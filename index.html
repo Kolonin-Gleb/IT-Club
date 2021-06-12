@@ -14,39 +14,41 @@
     
     <title>IT Club</title>
     
-    <link rel="stylesheet" href="styles/style.css">  <!-- Connect CSS to this project -->
+    <!-- Connect CSS to this project -->
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/slick.css">
     <link rel="stylesheet" href="styles/slick-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--use font-awesome icons-->
+
+    <!-- Use font-awesome icons-->
     <script src="js/jquery.js"></script>
     <script>
       function click_form() {
         console.log(1)
-          // собираем данные с формы
+          // Collect data from the form
           var user_name    = $('#user_name').val();
           var user_email   = $('#user_email').val();
           var text_comment = $('#text_comment').val();
-          // отправляем данные
+          // Send collected data
           $.ajax({
-              url: "/mail.php", // куда отправляем
-              type: "post", // метод передачи
-              dataType: "json", // тип передачи данных
-              data: { // что отправляем
+              url: "/mail.php", // adress for sent data
+              type: "post", // send method
+              dataType: "json", // type of data transfer
+              data: { // What we send
                 "user_name":    user_name,
                 "user_email":   user_email,
                 "text_comment": text_comment
               },
-              // после получения ответа сервера
+              // When server replied
               success: function(data){
-                  $('.messages').html(data.result); // выводим ответ сервера
+                  $('.messages').html(data.result); // Show server's answer
               }
           })
       }
     </script>
 </head>
 <body>
-  <!-- templates start -->
+  <!-- Templates start -->
 
   <template id="member_template">
     <div class="member_card">  
@@ -66,7 +68,8 @@
       </div>
     </div>
   </template>
-<!-- Начальный экран -->
+
+<!-- Home Screen -->
 
 <section class="hello d-flex justify-content-center align-items-center">
   <div class="container">
@@ -78,7 +81,7 @@
   </div>
 </section>
 
-<!-- Раздел приветствие -->
+<!-- Greeting section -->
 
 <section class="HiClub">
   <div class="container">
@@ -98,7 +101,7 @@
   </div>
 </section>
 
-<!-- 2 Раздел с мероприятиями-->
+<!-- Events section -->
   <section class="events" id="events">
     <div class="bigger">
       <div id="blockDate" class="blockDate">
@@ -123,7 +126,7 @@
     </div>
   </section>
 
-<!-- раздел с участниками -->
+<!-- Section of members -->
 
 <section class="members d-flex justify-content-center align-items-center">
   <div class="container-fluid">
@@ -429,7 +432,7 @@
 </section>
 
 
-<!-- Подвал сайта -->
+<!-- Contacts section -->
 
 <footer class="footer">
   <div class="container">
