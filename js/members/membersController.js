@@ -8,7 +8,7 @@ membersList.push(
         age: "16", 
         faculty: "Программист", 
         photo: "images/gallery_of_members/Gleb.jpg",
-        abstract: "Программирую на С++, Python. Есть личные проекты на github.",
+        abstract: "Программирую на С++, Python. Есть личные проекты на GitHub.",
         cvLink: "Посмотреть резюме",
         cvLinkAddress: "https://collegemirbis-my.sharepoint.com/:b:/g/personal/kolonings20_st_ithub_ru/EQd4OXF3sx5OuM-yZiBM8kcBNVxw2Yro9JSBxWW6jGvCEw?e=JkRuhQ",
         daddy: memberBlock
@@ -41,9 +41,9 @@ membersList.push(
         age: "17", 
         faculty: "Программист", 
         photo: "images/gallery_of_members/Sofia.jpg",
-        abstract: "ПрограммистПрограммист на Python. Есть опыт в управлении командой и организации  мероприятий. Люблю статистику и планирование!",
+        abstract: "Программист на Python. Есть опыт в управлении командой и организации  мероприятий. Люблю статистику и планирование!",
         cvLink: "Посмотреть резюме",
-        cvLinkAddress: "",
+        cvLinkAddress: "https://collegemirbis-my.sharepoint.com/:b:/g/personal/kolonings20_st_ithub_ru/ETYEhPnDuhlBuLP-tPBFybMBvodnklztmWsgPtNdQ5z6Nw?e=EYYPcb",
         daddy: memberBlock
     }),
 
@@ -53,7 +53,7 @@ membersList.push(
         faculty: "Программист", 
         photo: "images/gallery_of_members/Igor.jpg",
         abstract: "Программист Python, Dart/Flutter, HTML CSS. Базовое знание C, C++, C#, Pascal, Bash, Java.",
-        cvLink: "Посмотреть резюме",
+        cvLink: "Посмотреть резюме (Его нет)",
         cvLinkAddress: "#",
         daddy: memberBlock
     }),
@@ -71,9 +71,9 @@ membersList.push(
 
     new Member({
         name: "Николай Квашнин", 
-        age: "19", 
+        age: "18", 
         faculty: "Программист", 
-        photo: "images/gallery_of_members/Anonymous.png",
+        photo: "images/gallery_of_members/Nikolay.jpg",
         abstract: "Программист python/js. Имею наыкимоделирвания в SOLIDWORKS. Есть опыт работы с фрезерным и лазеным станками,а также с 3D и 2D принтерами.",
         cvLink: "Посмотреть резюме",
         cvLinkAddress: "https://collegemirbis-my.sharepoint.com/:w:/g/personal/kolonings20_st_ithub_ru/EYmj_RrgxlhDg0m4drMpjPEBMYcjG4AaWVdvZgV2GMisoA?e=yjdn58",
@@ -97,7 +97,7 @@ membersList.push(
         faculty: "Программист", 
         photo: "images/gallery_of_members/Alen.jpg",
         abstract: "Программист",
-        cvLink: "Посмотреть резюме",
+        cvLink: "Посмотреть резюме (Его нет)",
         cvLinkAddress: "#",
         daddy: memberBlock
     })
