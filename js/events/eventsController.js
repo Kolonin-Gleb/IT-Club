@@ -140,6 +140,62 @@ mainBlock.style.backgroundImage = eventsList[eventsList.length - 1].background;
 document.getElementById("title").innerHTML = eventsList[eventsList.length - 1].title;
 document.getElementById("description").innerHTML = eventsList[eventsList.length - 1].description;
 
-for(let index = 0; index < eventsList.length; index++){
+for (let index = 0; index < eventsList.length; index++) {
+    // console.log(index);
     document.getElementById("sideBlock").children[index].children[0].addEventListener("click", function() {Oliver(index);});
+}
+
+for (let index = eventsList.length-1; index > 0; index--) {
+    let child = document.createElement("div");
+    let title = document.createElement("div");
+    let description = document.createElement("div");
+    // let elem = document.createElement("div");
+    
+    child.classList = ["box"]
+    child.style.backgroundImage = eventsList[index].background;
+    title.innerHTML = eventsList[index].title;
+    child.appendChild(title);
+    child.setAttribute("index", index);
+    child.addEventListener("click", (e) => {
+        // e.toElement
+        let popup = document.createElement("div");
+        let popupContent = document.createElement("div");
+        let title = document.createElement("div");
+        let image = document.createElement("div");
+        let description = document.createElement("div");
+        let cross = document.createElement("div");
+        popup.classList = ["popup"]
+        popup.setAttribute("id", "popup")
+        title.classList = ["popup-title"];
+        image.classList = ["popup-image"];
+        description.classList = ["popup-desc"];
+        cross.classList = ["cross"]
+        cross.style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Cross_icon_%28white%29.svg/1024px-Cross_icon_%28white%29.svg.png)";
+        title.innerHTML = eventsList[e.toElement.getAttribute("index")].title;
+        image.style.backgroundImage = eventsList[e.toElement.getAttribute("index")].background;
+        description.innerHTML = eventsList[e.toElement.getAttribute("index")].description;
+        cross.addEventListener("click", () => {
+            // console.log("bbb");
+            document.querySelector("#popup").remove();
+        });
+        popupContent.appendChild(title);
+        popupContent.appendChild(image);
+        popupContent.appendChild(description);
+        popupContent.appendChild(cross);
+        popup.appendChild(popupContent);
+        document.body.appendChild(popup);
+    });
+    
+    // elem.appendChild(child);
+    
+    // cross.style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Cross_icon_%28white%29.svg/1024px-Cross_icon_%28white%29.svg.png)";
+    // topBar.appendChild(title);
+    // topBar.appendChild(cross)
+    
+    // child.appendChild(title);
+    // child.appendChild(image);
+    // child.appendChild(description);
+    
+    // console.log(child);
+    document.querySelector("#events > .smaller > .slider").appendChild(child);
 }

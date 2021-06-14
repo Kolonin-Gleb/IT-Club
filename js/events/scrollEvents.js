@@ -13,12 +13,12 @@ requestAnimationFrame(() => {
     }
   
     function onScroll() {
-      var boxes = document.querySelectorAll(".box");
+      var boxes = document.querySelectorAll(".bigger .box");
       let lastActiveElemI = 0;
       for (let i = boxes.length - 1; i > 0; i--) {
         const intersection = getIntersectionRatio(i);
         const top = boxes[i].offsetTop - carousel.scrollTop < 0;
-        
+        // console.log(eventsList[i]);
         boxes[i].firstElementChild.style = `
         transform-origin: ${top ? "bottom center" : "top center"};
         position: ${top ? "fixed" : "absolute"};

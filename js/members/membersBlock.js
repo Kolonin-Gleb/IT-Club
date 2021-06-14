@@ -11,7 +11,7 @@ class Member{
         let element = this.element;
         let template = document.getElementById("member_template").content.cloneNode(true);
 
-        element.classList.add("memberBox")
+        element.classList.add("member");
 
         this.name = name;
         this.age = age;
@@ -24,7 +24,7 @@ class Member{
         template.querySelector(".member_faculty").innerHTML = faculty;
         template.querySelector(".member_name").innerHTML = name;
         template.querySelector(".member_age").innerHTML = age;
-        template.querySelector(".member_photo").src = photo;
+        template.querySelector(".member_photo").setAttribute("src", photo);
         template.querySelector(".member_desc").innerHTML = abstract;
 
         let elementLink = template.querySelector(".member_cv");

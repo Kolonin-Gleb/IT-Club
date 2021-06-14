@@ -27,7 +27,7 @@ class EventsSideBlock {
 
         let span = Object.assign(document.createElement("span"), {innerHTML: title});
         element1.children[0].children[0].appendChild(span);
-
+        
         daddy.appendChild(element1);
     }
 }
