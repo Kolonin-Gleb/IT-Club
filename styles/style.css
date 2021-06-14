@@ -5,7 +5,7 @@
 
 section {
   width: 100%;
-  height: 980px;
+  min-height: 100vh;
 }
 
 .container {
@@ -16,15 +16,14 @@ section {
 /* Начальный экран */
 
 .hello_div {
-    background: linear-gradient(90deg, rgba(22, 163, 226, 1) 0%, rgba(152, 34, 255, 1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, rgba(22, 163, 226, 1) 0%, rgba(152, 34, 255, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .hello_div_h1 {
-    font-size: 12.5rem;
-    text-transform: uppercase;
-    font-family: 'Roboto',
-    sans-serif;
+  font-size: 12.5rem;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Раздел приветствие */
@@ -55,7 +54,6 @@ section {
 }
 
 /* Участники */
-
 
 .members {
   background-image: url('https://klike.net/uploads/posts/2019-06/1561182942_2.jpg');
@@ -238,9 +236,46 @@ input.in_text{
   text-align: center;
 }
 
+.scroll-icon {
+  height: 50px;
+  position: relative;
+  display: none;
+}
+
+.scroll-icon > i {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0) scaleY(0.8) scaleX(1);
+}
+
+i.fa-hand-point-up {
+  transform: translate(-40%, -5px) scale(0.8);
+}
+
+.sideBlock .box:nth-child(1) {
+  height: 0px;
+}
+
 @media screen and (max-width: 992px) {
   .hello_div_h1 {
     font-size: 10rem;
+  }
+
+  .container_photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .member_desc {
+    font-size: 30px;
+  }
+
+  .member_name {
+    font-size: 35px;
+  }
+
+  .member_faculty {
+    font-size: 25px;
   }
 }
 
@@ -258,20 +293,40 @@ input.in_text{
     display: none !important;
   }
 
+  .scroll-icon {
+    display: block;
+  }
+
   .auf, .aue {
     display: none !important;
   }
 
-  .member_name {
-    font-size: 40px;
+  .container_photo {
+    width: 150px;
+    height: 150px;
   }
 
-  .member_desc {
-    font-size: 30px;
+  .member_name {
+    font-size: 25px;
+  }
+
+  .member_desc,
+  .member_faculty,
+  .member_age,
+  .member_cv {
+    font-size: 20px;
   }
 }
 
 @media screen and (max-width: 576px) {
+  section {
+    min-height: 50vh;
+  }
+
+  .events > .smaller {
+    width: 70vw !important;
+  }
+
   .hello_div_h1 {
     font-size: 5rem;
   }
@@ -283,11 +338,62 @@ input.in_text{
   .h1_contact {
     font-size: 40px;
   }
+
+  .container_photo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .member_name {
+    font-size: 18px;
+  }
+
+  .member_desc,
+  .member_faculty,
+  .member_age,
+  .member_cv {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 360px) {
   .hello_div_h1 {
     font-size: 3rem;
+  }
+
+  .container_photo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .member_name {
+    font-size: 15px;
+  }
+
+  .member_desc,
+  .member_faculty,
+  .member_age,
+  .member_cv {
+    font-size: 10px;
+  }
+
+  .HiClub_title {
+    font-size: 50px;
+  }
+
+  .HiClub_text {
+    font-size: 18px;
+  }
+
+  .contact,
+  .text_soc {
+    font-size: 18px;
+  }
+
+  .container_for_soc,
+  .container_for_soc img {
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -307,6 +413,7 @@ input.in_text{
 
 .events {
   width: 100%;
+  height: 900px;
 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #ffffff;
@@ -461,10 +568,6 @@ input.in_text{
   transform: translateY(0);
 }
 
-#description>a {
-  color: #ffffff;
-}
-
 #description>a:focus {
   outline: none;
 }
@@ -490,6 +593,12 @@ input.in_text{
 }
 
 @media screen and (max-width: 1404px) {
+  section {
+    min-height: 90vh;
+    height: auto;
+    padding: 10vh 0;
+  }
+
   .events > .bigger {
     display: none;
   }

@@ -15,7 +15,7 @@ requestAnimationFrame(() => {
     function onScroll() {
       var boxes = document.querySelectorAll(".bigger .box");
       let lastActiveElemI = 0;
-      for (let i = boxes.length - 1; i > 0; i--) {
+      for (let i = 0; i < boxes.length; i++) {
         const intersection = getIntersectionRatio(i);
         const top = boxes[i].offsetTop - carousel.scrollTop < 0;
         // console.log(eventsList[i]);
@@ -31,7 +31,7 @@ requestAnimationFrame(() => {
           lastActiveElemI = i;
         }
       }
-      if (lastActiveElemI !== activeElemI) {
+      if (lastActiveElemI !== activeElemI && lastActiveElemI !== 0) {
         boxes[activeElemI].classList.remove("active");
         boxes[lastActiveElemI].classList.add("active");
         activeElemI = lastActiveElemI;
