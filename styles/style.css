@@ -12,20 +12,6 @@ section {
   max-width: 1404px !important;
 }
 
-
-/* Начальный экран */
-
-.hello_div {
-  background: linear-gradient(90deg, rgba(22, 163, 226, 1) 0%, rgba(152, 34, 255, 1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.hello_div_h1 {
-  font-size: 12.5rem;
-  text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
-}
-
 /* Раздел приветствие */
 
 .HiClub {
