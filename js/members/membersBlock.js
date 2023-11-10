@@ -1,3 +1,5 @@
+// Описание структуры карточки организатора
+// А также её заполнение из шаблона (Controller part)
 class Member{
     element = document.createElement("div");
     name;
@@ -20,7 +22,7 @@ class Member{
         this.abstract = abstract;
         this.cvLink = cvLink;
         this.cvLinkAddress = cvLinkAddress;
-        
+
         template.querySelector(".member_faculty").innerHTML = faculty;
         template.querySelector(".member_name").innerHTML = name;
         template.querySelector(".member_age").innerHTML = age;
@@ -32,8 +34,9 @@ class Member{
         elementLink.setAttribute("href", cvLinkAddress)
         elementLink.setAttribute("target", "_blank");
 
+        // Заполнение карточки с использованием шаблона
         element.appendChild(template);
-
         daddy.appendChild(element);
     }
 }
+

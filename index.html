@@ -10,7 +10,7 @@
   <meta name="keywords" content="IT, Club, IThub, College">
   <meta name="authors" content="IT Club Team">
 
-  <link rel="shortcut icon" href="./images/IT Club logo.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="./images/logos/IT Club.jpg" type="image/x-icon">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For mobile phones -->
 
@@ -19,76 +19,50 @@
   <!-- Connecting CSS-->
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/greeting.css">
-<!--  <link rel="stylesheet" href="styles/events.css">-->
-<!--  <link rel="stylesheet" href="styles/members.css">-->
-<!--  <link rel="stylesheet" href="styles/email_from.css">-->
-<!--  <link rel="stylesheet" href="styles/contacts.css">-->
+  <link rel="stylesheet" href="styles/events.css">
+  <link rel="stylesheet" href="styles/members.css">
+  <link rel="stylesheet" href="styles/emailForm.css">
+  <link rel="stylesheet" href="styles/contacts.css">
 
 
   <link rel="stylesheet" href="styles/slick.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!--use font-awesome icons-->
-  <script src="js/jquery.js"></script>
-  <script>
-    function click_form() {
-      console.log(1)
-        // Collect data from the form
-        var user_name    = $('#user_name').val();
-        var user_email   = $('#user_email').val();
-        var text_comment = $('#text_comment').val();
-        // Send collected data
-        $.ajax({
-            url: "/mail.php", // address for sent data
-            type: "post", // send method
-            dataType: "json", // type of data transfer
-            data: { // What we send
-              "user_name":    user_name,
-              "user_email":   user_email,
-              "text_comment": text_comment
-            },
-            // When server replied
-            success: function(data){
-                $('.messages').html(data.result); // Show server's answer
-            }
-        })
-    }
-  </script>
 </head>
 <body>
 
-  <!-- templates start -->
-<!--  <template id="member_template">-->
-<!--    <div class="member">-->
-<!--      <div class="member_padding">-->
-<!--        <div class="row">-->
-<!--          <div class="col-md-6 col-sm-6 col-6">-->
-<!--            <div class="container_photo">-->
-<!--              <img class="member_photo">-->
-<!--            </div>-->
-<!--          </div>-->
-<!--    -->
-<!--          <div class="col-md-6 col-sm-6 col-6">-->
-<!--            <p class="short_bio text-right">-->
-<!--              <span class="member_faculty"></span><br>-->
-<!--              <span class="member_name"></span><br>-->
-<!--              <span class="member_age"></span>-->
-<!--            </p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--    -->
-<!--        <div class="row">-->
-<!--          <div class="col-xl-10 col-lg-12">-->
-<!--            <p class="member_desc"></p>-->
-<!--          </div>-->
-<!--    -->
-<!--          <div class="col-xl-2 col-lg-12 text-right">-->
-<!--            <a class="member_cv" target="_blank">Посмотреть резюме</a>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </template>-->
+<!--Шаблон карточки организатора, что будет заполняться в JS-->
+<template id="member_template">
+  <div class="member">
+    <div class="member_padding">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-6">
+          <div class="container_photo">
+            <img class="member_photo">
+          </div>
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-6">
+          <p class="short_bio text-right">
+            <span class="member_faculty"></span><br>
+            <span class="member_name"></span><br>
+            <span class="member_age"></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-10 col-lg-12">
+          <p class="member_desc"></p>
+        </div>
+
+        <div class="col-xl-2 col-lg-12 text-right">
+          <a class="member_cv" target="_blank">Посмотреть резюме</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
 <!-- Greeting section -->
 <section class="HiClub">
@@ -110,102 +84,84 @@
 </section>
 
 <!-- Events section -->
-  <section class="events" id="events">
-    <div class="bigger">
-      <div id="blockDate" class="blockDate"></div>
-      <div id="carouselGallery" class="carouselGallery">
-        <div id="sideBlock" class="sideBlock"></div>
+<section class="events" id="events">
+  <div class="bigger">
+    <div id="blockDate" class="blockDate"></div>
+    <div id="carouselGallery" class="carouselGallery">
+      <div id="sideBlock" class="sideBlock"></div>
+    </div>
+    <div id="mainBlock" class="mainBlock">
+      <div id="content">
+        <!-- Данные карточки, что будут заполняться через JS -->
+        <div id="title"></div>
+        <div id="description"></div>
       </div>
-      <div id="mainBlock" class="mainBlock">
-        <div id="content">
-          <!-- Данные карточки, что будут заполняться через JS -->
-          <div id="title"></div>
-          <div id="description"></div>
+    </div>
+  </div>
+
+  <div class="smaller">
+    <div class="slider"></div>
+    <div class="scroll-icon">
+      <i class="fas fa-arrows-alt-h"></i> <br>
+      <i class="fas fa-hand-point-up"></i>
+    </div>
+  </div>
+</section>
+
+<!-- Section of members -->
+<section class="members d-flex justify-content-center align-items-center">
+  <div class="container-fluid">
+    <div id="memberBlock" class="memberBlock"></div>
+  </div>
+</section>
+
+<!-- Contacts section -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6  order-lg-first order-last">
+        <h1 class="h1_contact">Контакты</h1>
+        <div class="contact">
+          <p>Звоните: <a href="tel:+79164381712">+7 (916)4381712</a></p>
+          <p>Пишите: <a href="mailto:KoloninGS20@st.ithub.ru">KoloninGS20@st.ithub.ru</a></p>
+        </div>
+
+        <p class="text_soc">В социальных сетях - много полезного для участников клуба.<br>
+            Подписывайтесь: Discord, Telegram и YouTube!</p>
+        <div class="row">
+          <div class="container_for_soc"><a href="#"><img src="images/logos/Discord.png" alt="Discord logo"></a></div>
+          <div class="container_for_soc"><a href="#"><img src="images/logos/Telegram.png" alt="Telegram logo"></a></div>
+          <div class="container_for_soc"><a href="#"><img src="images/logos/YouTube.png" alt="YouTube logo"></a></div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 order-lg-l ast order-first">
+        <div class="form">
+          <form class="d-flex flex-column">
+            <input class="in_text" type="email" id="user_email" placeholder="Ваш email" required>
+            <input class="in_text" type="text" id="user_name" placeholder="Ваше имя" required>
+            <textarea class="in_text" id="text_comment" cols="30" rows="5" placeholder="Сообщение" required></textarea>
+            <input class="submit" id="bth_submit" value="Отправить письмо" type="button" onclick="click_form()">
+            <div class="messages"></div>
+          </form>
         </div>
       </div>
     </div>
+  </div>
+</footer>
 
-    <div class="smaller">
-      <div class="slider"></div>
-      <div class="scroll-icon">
-        <i class="fas fa-arrows-alt-h"></i> <br>
-        <i class="fas fa-hand-point-up"></i>
-      </div>
-    </div>
-  </section>
+<script src="js/jQuery.js"></script>
+<script src="js/slick.js"></script>
 
-<!--&lt;!&ndash; Section of members &ndash;&gt;-->
-<!--<section class="members d-flex justify-content-center align-items-center">-->
-<!--  <div class="container-fluid">-->
-<!--    <div id="memberBlock" class="memberBlock"></div>-->
-<!--  </div>-->
-<!--</section>-->
+<script src="js/events/eventsSideBlock.js"></script>
+<script src="js/events/eventsController.js"></script>
+<script src="js/events/eventsScroll.js"></script>
 
+<script src="js/members/membersBlock.js"></script>
+<script src="js/members/membersController.js"></script>
+<script src="js/members/membersScroll.js"></script>
 
-<!--&lt;!&ndash; Contacts section &ndash;&gt;-->
-<!--<footer class="footer">-->
-<!--  <div class="container">-->
-<!--    <div class="row">-->
-<!--      <div class="col-lg-6  order-lg-first order-last">-->
-<!--        <h1 class="h1_contact">Контакты</h1>-->
-<!--        <div class="contact">-->
-<!--          <p>Звоните: <a href="tel:+79164381712">+7 (916)4381712</a></p>-->
-<!--          <p>Пишите: <a href="mailto:KoloninGS20@st.ithub.ru">KoloninGS20@st.ithub.ru</a></p>-->
-<!--        </div>-->
+<script src="js/mail.js"></script>
 
-<!--        <p class="text_soc">В соц.сетях - много полезного для студентов и участников клуба.<br>-->
-<!--            Подписывайтесь: Вконтакте и Instagram!</p>-->
-<!--        <div class="row">-->
-<!--          <div class="container_for_soc"><a href="#"><img src="images/VK.png" alt="VK logo"></a></div>-->
-<!--          <div class="container_for_soc"><a href="#"><img src="images/Instagram.png" alt="Instagram logo"></a></div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="col-lg-6 order-lg-l ast order-first">-->
-<!--        <div class="form">-->
-<!--          <form class="d-flex flex-column">-->
-<!--            <input class="in_text" type="email" id="user_email" placeholder="Ваш email" required>-->
-<!--            <input class="in_text" type="text" id="user_name" placeholder="Ваше имя" required>-->
-<!--            <textarea  class="in_text" id="text_comment" cols="30" rows="5" placeholder="Сообщение" required></textarea>-->
-<!--            <input class="submit" id="bth_submit" value="Отправить письмо" type="button" onclick="click_form()">-->
-<!--            <div class="messages"></div>-->
-<!--          </form>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</footer>-->
-
-<!--  <script src="js/events/eventsSideBlock.js"></script>-->
-<!--  <script src="js/events/eventsController.js"></script>-->
-<!--  <script src="js/events/scrollEvents.js"></script>-->
-
-<!--  <script src="js/members/membersBlock.js"></script>-->
-<!--  <script src="js/members/membersController.js"></script>-->
-
-<!--  <script src="js/slick.js"></script>-->
-<!--  <script>-->
-<!--    $('.memberBlock').slick({-->
-<!--      dots: false,-->
-<!--      adaptiveHeight: true,-->
-<!--    })-->
-<!--    // .hover(()=>{$('.slick-prev').css("opacity", "1");$(".slick-next").css("opacity", "1")},()=>{$('.slick-prev').css("opacity", "0");$(".slick-next").css("opacity", "0")})-->
-
-<!--    $(".intro").slick({-->
-<!--      slidesToShow: 8 ,-->
-<!--      slidesToScroll: 1,-->
-<!--      autoplay: true,-->
-<!--      autoplaySpeed: 2000-->
-<!--    });-->
-
-<!--    $("#events > .smaller > .slider").slick({-->
-<!--      slidesToShow: 1,-->
-<!--      slidesToScroll: 1,-->
-<!--      arrows: true,-->
-<!--      prevArrow: '<button type="button" class="aue"><i class="fas fa-chevron-left"></i></button>',-->
-<!--      nextArrow: '<button type="button" class="auf"><i class="fas fa-chevron-right"></i></button>',-->
-<!--      // autoplay: true,-->
-<!--      // autoplaySpeed: 3500-->
-<!--    });-->
-<!--  </script>-->
 </body>
 </html>
