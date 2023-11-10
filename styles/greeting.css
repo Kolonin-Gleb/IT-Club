@@ -1,0 +1,26 @@
+/* Раздел приветствие */
+
+.HiClub {
+    background-color: #9176DE;
+}
+.HiClub p {
+    color: white;
+}
+
+.HiClub_img {
+    width: 100%;
+    height: auto;
+}
+
+.HiClub_title {
+    font-size: 150px;
+    font-weight: 700;
+    font-family: 'Montserrat700',
+    sans-serif;
+}
+
+.HiClub_text {
+    font-size: 40px;
+    font-family: 'Montserrat',
+    sans-serif;
+}

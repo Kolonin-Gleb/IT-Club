@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
+ <meta charset="UTF-8">
 
-    <!--SEO - Search engine optimization-->
-    <meta name="description" content="Club, for collaboration and knowledge exchange in programming.">
-    <meta name="keywords" content="IT, Club, IThub">
-    <meta name="authors" content="IT Club Team">
+  <!--SEO - Search engine optimization-->
+  <meta name="description" content="Club, for collaboration and knowledge exchange in programming.">
+  <meta name="keywords" content="IT, Club, IThub, College">
+  <meta name="authors" content="IT Club Team">
 
-    <link rel="shortcut icon" href="./images/IT Club logo.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="./images/IT Club logo.jpg" type="image/x-icon">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For mobile phones -->
-    
-    <title>IT Club</title>
-    
-    <!-- Connecting CSS-->
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/slick.css">
-    <!-- <link rel="stylesheet" href="styles/slick-theme.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <!--use font-awesome icons-->
-    <script src="js/jquery.js"></script>
-    <script>
-      function click_form() {
-        console.log(1)
-          // Collect data from the form
-          var user_name    = $('#user_name').val();
-          var user_email   = $('#user_email').val();
-          var text_comment = $('#text_comment').val();
-          // Send collected data
-          $.ajax({
-              url: "/mail.php", // adress for sent data
-              type: "post", // send method
-              dataType: "json", // type of data transfer
-              data: { // What we send
-                "user_name":    user_name,
-                "user_email":   user_email,
-                "text_comment": text_comment
-              },
-              // When server replied
-              success: function(data){
-                  $('.messages').html(data.result); // Show server's answer
-              }
-          })
-      }
-    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For mobile phones -->
+
+  <title>IT Club</title>
+
+  <!-- Connecting CSS-->
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/greeting.css">
+  <link rel="stylesheet" href="styles/events.css">
+  <link rel="stylesheet" href="styles/members.css">
+  <link rel="stylesheet" href="styles/email_from.css">
+  <link rel="stylesheet" href="styles/contacts.css">
+
+
+  <link rel="stylesheet" href="styles/slick.css">
+  <!-- <link rel="stylesheet" href="styles/slick-theme.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--use font-awesome icons-->
+  <script src="js/jquery.js"></script>
+  <script>
+    function click_form() {
+      console.log(1)
+        // Collect data from the form
+        var user_name    = $('#user_name').val();
+        var user_email   = $('#user_email').val();
+        var text_comment = $('#text_comment').val();
+        // Send collected data
+        $.ajax({
+            url: "/mail.php", // adress for sent data
+            type: "post", // send method
+            dataType: "json", // type of data transfer
+            data: { // What we send
+              "user_name":    user_name,
+              "user_email":   user_email,
+              "text_comment": text_comment
+            },
+            // When server replied
+            success: function(data){
+                $('.messages').html(data.result); // Show server's answer
+            }
+        })
+    }
+  </script>
 </head>
 <body>
 

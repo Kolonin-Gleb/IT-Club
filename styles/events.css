@@ -1,0 +1,299 @@
+/* ________________________ГАЛЕРЕЯ_______________________________ */
+
+.events {
+    width: 100%;
+    height: 900px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+
+    background-color: #181818;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+.events > .bigger {
+    height: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.events > .smaller {
+    display: none;
+}
+
+.blockDate {
+    height: 500px;
+    width: 50px;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 40px;
+}
+
+.carouselGallery {
+    height: 700px;
+    overflow-y: scroll;
+    overflow-x: visible;
+}
+
+.carouselGallery::-webkit-scrollbar {
+    width: 0;
+}
+
+.sideBlock .box:nth-child(1) {
+    height: 0px;
+}
+
+.sideBlock {
+    height: auto;
+    width: var(--sideBlock-width);
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: visible;
+}
+
+.sideBlock > * > div {
+    cursor: pointer;
+}
+
+/*TODO: what value should be in ()?*/
+.sideBlock > .box:last-child(pass) > div {
+    cursor: default;
+}
+
+.bigger .box {
+    position: relative;
+    width: var(--box-width);
+    height: 300px;
+    transform: translateY(150px);
+    color: white;
+    margin: 0 auto;
+    margin-bottom: 24px;
+
+    border: 0px solid #00000000;
+
+    filter: grayscale(85%);
+}
+
+.bigger .box > div {
+    position: absolute;
+    top: 0;
+    width: 398px;
+    height: 298px;
+
+    transform-origin: top center;
+    will-change: transform;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sup_layer {
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+
+    opacity: 0.0;
+    z-index: 10;
+    transition-duration: 0.3s;
+}
+
+.active .sup_layer:hover {
+    opacity: 1.0;
+}
+
+.bigger .active.box {
+    filter: grayscale(0);
+    border-width: var(--border-width);
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    transition-property: border;
+    transition-duration: 0.5s;
+}
+
+.sup_layer > span {
+    height: 70px;
+    width: inherit;
+
+    background-color: var(--title-background);
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainBlock {
+    height: 650px;
+    width: 65%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+#content {
+    height: 100%;
+    width: 100%;
+
+    background-color: var(--content-background);
+
+    transform: translateY(calc(100% - var(--title-height) - 15px));
+    transition: 0.5s;
+}
+
+#content:hover {
+    transform: translateY(0);
+}
+
+#description>a:focus {
+    outline: none;
+}
+
+#title {
+    min-height: var(--title-height);
+    max-width: 100%;
+    padding-left: 25px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+
+    background-color: var(--title-background);
+    font-size: 30px;
+}
+
+#description {
+    width: calc(100% - 160px);
+    margin: 30px auto 0 auto;
+    padding-bottom: 30px;
+    font-size: 22px;
+    max-height: 520px;
+    overflow: auto;
+}
+
+/*Events gallery styles and adaptation*/
+
+@media screen and (max-width: 1404px) {
+    section {
+        min-height: 90vh;
+        height: auto;
+        padding: 10vh 0;
+    }
+
+    .events > .bigger {
+        display: none;
+    }
+
+    .events > .smaller {
+        display: block;
+        width: 50vw;
+    }
+
+    .events > .smaller > .slider {
+        width: 100%;
+    }
+
+    .events > .smaller .box {
+        /* width: 70vw; */
+        position: relative;
+        height: 500px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .events > .smaller .box > div {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background-color: #262626bb;
+        padding: 5px 15px;
+    }
+
+    .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #00000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup > div {
+        position: relative;
+        width: 80vw;
+        height: 80vh;
+        background-color: #000000;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .popup > div > div {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .popup-title {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .popup-image {
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .popup-desc {}
+
+    .popup > div > .cross {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        transform: translate(100%, -100%);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+}
+
+.aue, .auf {
+    width: 70px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    /* z-index: 999; */
+    background-color: rgb(0 0 0 / 66%);
+    border: none;
+    transform: translateX(-100%);
+}
+.auf {
+    right: 0;
+    transform: translateX(100%);
+}

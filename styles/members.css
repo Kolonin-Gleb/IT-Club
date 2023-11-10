@@ -1,0 +1,78 @@
+/* Участники */
+
+.members {
+    background-image: url('https://klike.net/uploads/posts/2019-06/1561182942_2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.memberBlock {
+    width: 100%;
+    height: auto;
+}
+
+.member_padding {
+    padding: 12%;
+}
+
+.member {
+    max-width: 85% !important;
+    margin: auto;
+    display: block !important;
+    background-color: #181818;
+}
+
+.container_photo {
+    width: 257.5px;
+    height: 257.5px;
+    overflow: hidden;
+    border-radius: 200px;
+    margin: 0 0 10% 10%;
+}
+
+.member_photo {
+    width: 100%;
+    height: auto;
+}
+
+.short_bio,
+.member_desc,
+.member_cv,
+.member_cv:hover {
+    color: white;
+}
+
+.member_cv {
+    text-decoration: underline;
+}
+
+.member_name {
+    font-size: 50px;
+}
+
+.member_faculty, .member_age, .member_cv {
+    font-size: 30px;
+}
+
+.member_desc {
+    font-size: 40px;
+}
+
+.slick-next, .slick-prev {
+    width: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 7%;
+    z-index: 999;
+    background-color: rgb(0 0 0 / 66%);
+    border: none;
+}
+.slick-next{
+    right: 0;
+}
+
+.fas {
+    color: white;
+    font-size: xx-large;
+}

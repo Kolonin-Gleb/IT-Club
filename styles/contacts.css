@@ -1,0 +1,29 @@
+.contact,
+.text_soc,
+.h1_contact,
+.contact a {
+    color: white;
+    margin-bottom: 10%;
+}
+
+.h1_contact {
+    font-size: 90px;
+    font-weight: bold;
+}
+.contact,
+.text_soc {
+    font-size: 24px;
+}
+
+.container_for_soc {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50px;
+    margin: 5%;
+}
+
+.container_for_soc img {
+    width: 100%;
+    height: 100%;
+}
