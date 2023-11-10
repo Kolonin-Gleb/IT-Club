@@ -1,3 +1,4 @@
+// Данная функция добавляет и отображает дату с боку от просматриваемого мероприятия (Controller part)
 class EventsSideBlock {
     element = document.createElement("div");
     title;
@@ -31,3 +32,4 @@ class EventsSideBlock {
         daddy.appendChild(element1);
     }
 }
+

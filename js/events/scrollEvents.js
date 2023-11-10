@@ -1,3 +1,4 @@
+// Здесь описана анимация изменения размера и цвета пролистываемых мероприятий
 requestAnimationFrame(() => {
     const boxes = document.querySelectorAll(".box");
     let carousel = document.getElementById("carouselGallery")
@@ -42,3 +43,4 @@ requestAnimationFrame(() => {
   
     onScroll();
   });
+
