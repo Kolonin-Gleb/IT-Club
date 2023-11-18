@@ -1,20 +1,9 @@
 /*Стили формы теста определения спеиальности*/
 
+/*Для спрятанной кнопки ПРОЙТИ ТЕСТ ЗАНОВО*/
 .hidden
 {
     display:none!important
-}
-
-.unscrollable
-{
-    overflow:hidden;
-    height:100vh
-}
-
-.test
-{
-    font-size:1.8rem;
-    line-height:120%
 }
 
 h1.heading
@@ -23,25 +12,11 @@ h1.heading
     font-weight:700
 }
 
-.resulting.message,.resulting.message .test.paragraph
+.test
 {
-    font-size:1.6rem
-}
-
-p+p
-{
-    margin-top:1.5rem
-}
-
-/*button*/
-/*{*/
-/*    font-size:1.6rem;*/
-/*    font-variant:small-caps*/
-/*}*/
-
-.test.paragraph.accent
-{
-    font-size:1.1em
+    color: white;
+    font-size:1.8rem;
+    line-height:120%
 }
 
 .test.paragraph.accent .accent.profession
@@ -49,21 +24,6 @@ p+p
     display:block;
     font-size:1em;
     font-weight:700
-}
-
-.test.list+.test.paragraph,.test.paragraph+.test.list
-{
-    margin-top:1.2rem
-}
-
-.test.list
-{
-    padding-left:3rem
-}
-
-.test.list li+li
-{
-    margin-top:.9rem
 }
 
 .visually-hidden
@@ -77,6 +37,7 @@ p+p
 
 .wrap
 {
+    color: white;
     display:flex;
     align-items:center;
     width:100%;
@@ -89,20 +50,9 @@ p+p
     background-color: #181818;
 }
 
-.wrap .credits
-{
-    content:'';
-    position:absolute;
-    bottom:29px;
-    height:17px;
-    right:calc((100% - 915px)/ 2);
-    width:240px;
-    background-size:contain;
-    background-position:right center
-}
-
 .test.container
 {
+    color: white;
     position:relative;
     display:flex;
     flex-direction:column;
@@ -154,6 +104,7 @@ p+p
     cursor:pointer
 }
 
+/*Стили для кружочков выбора ответа*/
 .test.form.pair.label+.test.form.pair.label
 {
     margin-top:2.5rem
@@ -180,6 +131,7 @@ p+p
     padding-left:3.3rem
 }
 
+
 .test.form.pair.text::before
 {
     content:"";
@@ -194,6 +146,7 @@ p+p
     border-width:1px
 }
 
+/*Стили для клавиш управления тестом*/
 .test.buttons
 {
     display:flex;
@@ -220,10 +173,6 @@ p+p
 
 @media (min-width: 641px) and (max-width: 1000px)
 {
-    .wrap .credits
-    {
-        right:calc((100% - 90% + 12px)/ 2)
-    }
     .test.container
     {
         width:90%;
@@ -241,12 +190,6 @@ p+p
     {
         padding:10px 10px 30px 10px;
         transition:none
-    }
-    .wrap .credits
-    {
-        right:10px;
-        bottom:7px;
-        max-width:calc(50% - 50px)
     }
     .test.container
     {
