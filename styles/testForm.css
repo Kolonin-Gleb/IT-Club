@@ -6,6 +6,15 @@
     display:none!important
 }
 
+.visually-hidden
+{
+    width:1px;
+    height:1px;
+    clip:rect(1px,1px,1px,1px);
+    position:absolute;
+    font-size:0
+}
+
 h1.heading
 {
     font-size:2.9rem;
@@ -16,40 +25,10 @@ h1.heading
 {
     color: white;
     font-size:1.8rem;
-    line-height:120%
+    line-height:100%
 }
 
-.test.paragraph.accent .accent.profession
-{
-    display:block;
-    font-size:1em;
-    font-weight:700
-}
-
-.visually-hidden
-{
-    width:1px;
-    height:1px;
-    clip:rect(1px,1px,1px,1px);
-    position:absolute;
-    font-size:0
-}
-
-.wrap
-{
-    color: white;
-    display:flex;
-    align-items:center;
-    width:100%;
-    min-height:100vh;
-    padding:60px 10px;
-    font-size:1.8rem;
-    background-position:-25px -50px;
-    background-size:calc(100% + 50px);
-    transition:background-image 1s,background-size 1s,color 1s,font-weight .2s;
-    background-color: #181818;
-}
-
+/*Ключевые стили для содержимого теста-формы*/
 .test.container
 {
     color: white;
@@ -61,9 +40,30 @@ h1.heading
     min-height:600px;
     margin-left:auto;
     margin-right:auto;
-    padding:120px 200px;
+    padding:60px 100px;
     border:6px solid #fff;
     transition:background-color 1s;
+    background-color: #181818;
+}
+
+.test.paragraph.accent .accent.profession
+{
+    display:block;
+    font-size:1em;
+    font-weight:700
+}
+
+.wrap
+{
+    color: white;
+    display:flex;
+    align-items:center;
+    width:100%;
+    padding:60px 10px;
+    /*font-size:1.8rem;*/
+    /*background-position:-25px -50px;*/
+    /*background-size:calc(100% + 50px);*/
+    transition:background-image 1s,background-size 1s,color 1s,font-weight .2s;
     background-color: #181818;
 }
 
@@ -89,6 +89,7 @@ h1.heading
     margin:2.5rem 0
 }
 
+/*Прогресс прохождения опроса из 12*/
 .test.form.counter::after
 {
     content:"/12"
@@ -131,13 +132,12 @@ h1.heading
     padding-left:3.3rem
 }
 
-
+/*Стили для RadioButtons, для выбора утверждений в тесте*/
 .test.form.pair.text::before
 {
     content:"";
     position:absolute;
     left:0;
-    top:calc(50% - 1.1rem);
     display:block;
     width:2.2rem;
     height:2.2rem;
@@ -151,7 +151,7 @@ h1.heading
 {
     display:flex;
     flex-wrap:nowrap;
-    margin-top:50px
+    margin-top:10px
 }
 
 /*Отсутуп между отображаемыми кнопками управления тестом*/
