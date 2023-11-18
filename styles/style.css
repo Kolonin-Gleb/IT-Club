@@ -50,10 +50,6 @@ section {
     font-size: 7rem;
   }
 
-  .HiClub_title {
-    font-size: 75px;
-  }
-
   .slick-next,
   .slick-prev {
     display: none !important;
@@ -101,10 +97,6 @@ section {
     font-size: 25px;
   }
 
-  .h1_contact {
-    font-size: 40px;
-  }
-
   .container_photo {
     width: 70px;
     height: 70px;
@@ -141,14 +133,6 @@ section {
   .member_age,
   .member_cv {
     font-size: 10px;
-  }
-
-  .HiClub_title {
-    font-size: 50px;
-  }
-
-  .HiClub_text {
-    font-size: 18px;
   }
 
   .contact,

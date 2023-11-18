@@ -1,7 +1,18 @@
 /* Раздел приветствие */
 
+.HiClub_title {
+    color: white;
+    font-size: 150px;
+    font-weight: 700;
+    font-family: 'Montserrat700', sans-serif;
+}
+
+.HiClub_text {
+    font-size: 18px;
+}
+
 .HiClub {
-    background-color: #9176DE;
+    background-color: #181818;
 }
 .HiClub p {
     color: white;
@@ -12,15 +23,7 @@
     height: auto;
 }
 
-.HiClub_title {
-    font-size: 150px;
-    font-weight: 700;
-    font-family: 'Montserrat700',
-    sans-serif;
-}
-
 .HiClub_text {
     font-size: 40px;
-    font-family: 'Montserrat',
-    sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }

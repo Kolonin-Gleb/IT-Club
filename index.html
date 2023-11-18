@@ -23,13 +23,14 @@
   <link rel="stylesheet" href="styles/members.css">
   <link rel="stylesheet" href="styles/emailForm.css">
   <link rel="stylesheet" href="styles/contacts.css">
+  <link rel="stylesheet" href="styles/testForm.css">
 
 
   <link rel="stylesheet" href="styles/slick.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<body>
+<body onload="jsonLoading()">
 
 <!--Шаблон карточки организатора, что будет заполняться в JS-->
 <template id="member_template">
@@ -73,7 +74,7 @@
     </div>
 
     <div class="col-md-12">
-      <p class="HiClub_title">IT Club -</p>
+      <h1 class="HiClub_title">IT Club -</h1>
     </div>
 
     <div class="col-md-12">
@@ -115,12 +116,100 @@
   </div>
 </section>
 
+<!-- Specialization test -->
+<div class="wrap">
+  <div class="test container">
+
+    <div class="test greeting message" id="greeting">
+      <h1 class="test heading">Какое направление в IT выбрать?</h1>
+      <div class="test text">
+        <p class="test paragraph">Пройдите тест-опрос и узнайте, какая специальность в IT вам подходит!</p>
+        <p class="test paragraph">Прохождение тестирования займет около 2-3 минут.</p>
+      </div>
+    </div>
+
+    <div class="test resulting message" id="resultForm" hidden>
+      <h1 class="test heading">Поздравляю, вы прошли тест!</h1>
+      <div class="test text">
+        <p class="test paragraph accent">Вам подходит направление в IT:
+          <span class="accent profession" id="resultProfession">___________________ – __%</span>
+        </p>
+        <p class="test paragraph" id="firstProfParagraph">Текст из data.json</p>
+        <p class="test paragraph" id="secondProfParagraph"> Текст из data.json</p>
+      </div>
+
+      <div class="test choice">
+        <p class="test paragraph accent">Выберете курс ниже и начните изучать программирование с подходящей вам программы:</p>
+        <ul class="test list">
+          <li><a href="#">Frontend-разработчик</a></li>
+          <li><a href="#">React: библиотека фронтенд-разработки</a></li>
+        </ul>
+
+        <ul id="legend" class="hidden">
+          <li>
+            <span class="profession">Тестировщик</span>
+            <span class="points">___</span>
+          </li>
+          <li>
+            <span class="profession">Разработчик мобильных приложений</span>
+            <span class="points">___</span></li>
+          <li>
+            <span class="profession">Frontend - разработчик</span>
+            <span class="points">___</span></li>
+          <li>
+            <span class="profession">Fullstack - разработчик</span>
+            <span class="points">___</span>
+          </li>
+        </ul>
+
+        <p class="test paragraph" id="secondprof">Также вы можете обратить внимание на профессию Фронтент-разработчик:
+          <a href="#">Frontend-разработчик</a>,
+          <a href="#">React: библиотека фронтенд-разработки</a>.
+        </p>
+        <ul class="test list">
+          <li>Frontend-разработчик с нуля</li>
+        </ul>
+      </div>
+    </div>
+
+    <form class="test form hidden" id=questionForm>
+      <p class="test form message">Выберите одно из двух утверждений, которое вам ближе:</p>
+      <span class="test form counter" id=qnum>_</span>
+      <label class="test form pair label"><input class="test form pair input" onclick="radioupd()" type="radio" name="pair" tabindex="1">
+        <span class="test form pair text" name="answer">___________________________________________</span>
+      </label>
+      <label class="test form pair label"><input class="test form pair input" onclick="radioupd()" type="radio" name="pair" tabindex="1" checked>
+        <span class="test form pair text" name="answer">___________________________________________</span>
+      </label>
+    </form>
+
+    <!-- ====================== Кнопки управления прохождением теста ====================== -->
+
+    <div class="test buttons">
+      <button class="test button nav" tabindex="0" id="back" onclick="backClick()" disabled hidden>
+        <span>Назад</span>
+      </button>
+
+      <!-- Эта кнопка превращается в кнопку далее после начала тестирования -->
+      <button class="test button nav" tabindex="1" id="next" onclick="nextClick()">
+        <span id="nextbutton">Начать тестирование</span>
+      </button>
+
+      <!-- Кнопка пройти тест заново -->
+      <button class="test button more hidden" tabindex="1" id="modal" onclick="location.reload()">
+        <span>Пройти тест заново</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+
 <!-- Contacts section -->
 <footer class="footer">
   <div class="container">
     <div class="row">
       <div class="col-lg-6  order-lg-first order-last">
-        <h1 class="h1_contact">Контакты</h1>
+        <h2 class="h_contact">Контакты</h2>
         <div class="contact">
           <p>Звоните: <a href="tel:+79164381712">+7 (916)4381712</a></p>
           <p>Пишите: <a href="mailto:KoloninGS20@st.ithub.ru">KoloninGS20@st.ithub.ru</a></p>
@@ -162,6 +251,7 @@
 <script src="js/members/membersScroll.js"></script>
 
 <script src="js/mail.js"></script>
+<script src="js/testForm.js"></script>
 
 </body>
 </html>
