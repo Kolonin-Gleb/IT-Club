@@ -1,7 +1,6 @@
 // Тут данные для заполнения (Model part)
 
 let memberBlock = document.getElementById("memberBlock");
-console.log(memberBlock);
 
 let membersList = [];
 

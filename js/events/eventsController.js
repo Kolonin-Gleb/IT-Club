@@ -143,7 +143,7 @@ document.getElementById("title").innerHTML = eventsList[eventsList.length - 1].t
 document.getElementById("description").innerHTML = eventsList[eventsList.length - 1].description;
 // Заполнение карточки по клику на неё.
 for (let index = 0; index < eventsList.length; index++) {
-    console.log(index);
+    // console.log(index);
     document.getElementById("sideBlock").children[index].children[0].addEventListener("click", function() {Oliver(index);});
 }
 // Добавление всплывающих окон с подробной информацией о событиях (pop-ups)

@@ -1,15 +1,10 @@
+// Слайдер для участников
 $('.memberBlock').slick({
     dots: false,
     adaptiveHeight: true,
 });
 
-$(".intro").slick({
-    slidesToShow: 8 ,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000
-});
-
+// Слайдер для мероприятий
 $("#events > .smaller > .slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
