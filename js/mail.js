@@ -1,7 +1,7 @@
 // Функия для формы отправки письма
 // Данные собранные из формы будут перенаправленны в mail.php
-function click_form() {
-    console.log(1)
+function clickForm() {
+    console.log(1);
     // Collect data from the form
     var user_name    = $('#user_name').val();
     var user_email   = $('#user_email').val();
